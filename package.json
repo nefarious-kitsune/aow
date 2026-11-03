@@ -1,0 +1,18 @@
+{
+  "name": "www",
+  "version": "0.0.1",
+  "description": "Antihero's AoW Website",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nefarious-kitsune/aow.git"
+  },
+  "engines": {
+    "node": ">=22.1.0"
+  },
+  "dependencies": {
+    "latest": "^0.2.0",
+    "sharp": "^0.34.5"
+  }
+}
