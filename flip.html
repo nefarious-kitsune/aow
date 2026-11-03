@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
   <title>AoW Formation Flipper</title>
   <style>
@@ -35,28 +34,26 @@
       if (decoded.startsWith('{') && decoded.endsWith('}')) {
         const formation = JSON.parse(decoded);
         const oldLayout = formation.troopLayout;
+        const newLayout = {};
 
         const troopArray = [];
         for (let rowNbr = 0; rowNbr < 6; rowNbr++) {
-          const rowArray = [];
           for (let colNbr = 0; colNbr < 6; colNbr++) {
-            const key = (rowNbr * 10 + colNbr).toString();
-            const val =(typeof oldLayout[key] === 'number')?oldLayout[key]:null;
-            rowArray.push(val);
-          }
-          troopArray.push(rowArray.reverse());
-        }
-
-        const newLayout = {};
-        for (let rowNbr = 0; rowNbr < 6; rowNbr++) {
-          for (let colNbr = 0; colNbr < 6; colNbr++) {
-            const key = (rowNbr * 10 + colNbr).toString();
-            const val = troopArray[rowNbr][colNbr];
-            if (typeof val === 'number') newLayout[key] = val;
+            const oldKey = (rowNbr * 10 + colNbr).toString();
+            const newKey = (rowNbr * 10 + (6-colNbr)).toString();
+            if (typeof oldLayout[oldKey] === 'number') {
+              newLayout[newKey] = oldLayout[oldKey];
+            }
           }
         }
-
         formation.troopLayout = newLayout;
+        if (formation.heroLayout["2"]) {
+          formation.heroLayout["1"] = formation.heroLayout["2"];
+          delete formation.heroLayout["2"];
+        } else if (formation.heroLayout["1"]) {
+          formation.heroLayout["2"] = formation.heroLayout["1"];
+          delete formation.heroLayout["1"];
+        }
 
         textarea.value = btoa(JSON.stringify(formation));
       }
