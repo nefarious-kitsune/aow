@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+  <title>AoW Formation Flipper</title>
+  <style>
+    .tool-bar {
+      padding: 0.5rem;
+    }
+    .tool-button {
+      width: 3rem;
+      height: 3rem;
+    }
+
+  </style>
+  <script>
+    function clearFormation() {
+      const textarea = document.querySelector('#formationCode');
+      textarea.value = '';
+    }
+
+    function copyFormation() {
+      const textarea = document.querySelector('#formationCode');
+      // from https://stackoverflow.com/questions/1173194/
+      const range = document.createRange();
+      range.selectNode(textarea);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      navigator.clipboard.writeText(textarea.value);
+    }
+
+    function flipFormation() {
+      const textarea = document.querySelector('#formationCode');
+      const encoded = textarea.value.trim();
+      const decoded = atob(encoded);
+      if (decoded.startsWith('{') && decoded.endsWith('}')) {
+        const formation = JSON.parse(decoded);
+        const oldLayout = formation.troopLayout;
+
+        const troopArray = [];
+        for (let rowNbr = 0; rowNbr < 6; rowNbr++) {
+          const rowArray = [];
+          for (let colNbr = 0; colNbr < 6; colNbr++) {
+            const key = (rowNbr * 10 + colNbr).toString();
+            const val =(typeof oldLayout[key] === 'number')?oldLayout[key]:null;
+            rowArray.push(val);
+          }
+          troopArray.push(rowArray.reverse());
+        }
+
+        const newLayout = {};
+        for (let rowNbr = 0; rowNbr < 6; rowNbr++) {
+          for (let colNbr = 0; colNbr < 6; colNbr++) {
+            const key = (rowNbr * 10 + colNbr).toString();
+            const val = troopArray[rowNbr][colNbr];
+            if (typeof val === 'number') newLayout[key] = val;
+          }
+        }
+
+        formation.troopLayout = newLayout;
+
+        textarea.value = btoa(JSON.stringify(formation));
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <h2 style="background:#e0e0e0;">AoW Formation Flipper</h2>
+
+  <div style="background:#e0e0e0;" class="tool-bar">
+    <input
+      type="button"
+      class="tool-button"
+      id="clearButton"
+      value="Clear"
+      onclick="clearFormation()">
+    <input
+      type="button"
+      class="tool-button"
+      id="flipButton"
+      value="Flip"
+      onclick="flipFormation()">
+    <input
+      type="button"
+      class="tool-button"
+      id="copyButton"
+      value="Copy"
+      onclick="copyFormation()">
+  </div>
+  <!-- <textarea id="formationCode" onchange="flipFormation()"></textarea> -->
+  <textarea
+    id="formationCode"
+    rows="5"
+    cols="40"></textarea>
+</body>
