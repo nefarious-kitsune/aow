@@ -37,8 +37,8 @@
         const newLayout = {};
 
         const troopArray = [];
-        for (let rowNbr = 0; rowNbr < 6; rowNbr++) {
-          for (let colNbr = 0; colNbr < 6; colNbr++) {
+        for (let rowNbr = 0; rowNbr <= 6; rowNbr++) {
+          for (let colNbr = 0; colNbr <= 6; colNbr++) {
             const oldKey = (rowNbr * 10 + colNbr).toString();
             const newKey = (rowNbr * 10 + (6-colNbr)).toString();
             if (typeof oldLayout[oldKey] === 'number') {
