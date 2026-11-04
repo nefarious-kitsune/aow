@@ -9,7 +9,6 @@
       width: 3rem;
       height: 3rem;
     }
-
   </style>
   <script>
     function clearFormation() {
@@ -36,17 +35,17 @@
         const oldLayout = formation.troopLayout;
         const newLayout = {};
 
-        const troopArray = [];
-        for (let rowNbr = 0; rowNbr <= 6; rowNbr++) {
-          for (let colNbr = 0; colNbr <= 6; colNbr++) {
-            const oldKey = (rowNbr * 10 + colNbr).toString();
-            const newKey = (rowNbr * 10 + (6-colNbr)).toString();
+        for (let row = 0; row <= 6; row++) {
+          for (let col = 0; col <= 6; col++) {
+            const oldKey = (row * 10 + col).toString();
+            const newKey = (row * 10 + (6 - col)).toString();
             if (typeof oldLayout[oldKey] === 'number') {
               newLayout[newKey] = oldLayout[oldKey];
             }
           }
         }
         formation.troopLayout = newLayout;
+
         if (formation.heroLayout["2"]) {
           formation.heroLayout["1"] = formation.heroLayout["2"];
           delete formation.heroLayout["2"];
@@ -85,8 +84,7 @@
       value="Copy"
       onclick="copyFormation()">
   </div>
-  <!-- <textarea id="formationCode" onchange="flipFormation()"></textarea> -->
-  <textarea
+    <textarea
     id="formationCode"
     style="background:#303030; color: #f0f0f0;"
     rows="5"
