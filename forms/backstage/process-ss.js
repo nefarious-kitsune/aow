@@ -47,8 +47,8 @@ const promises = imageFiles.map(async (fName) => {
 
   const fPath = path.join(currDir, fName);
   const exportedFName = `${formId}-${formIdExt}${path.extname(fName)}`;
-  const exportedFPath = path.join(currDir, '../', exportedFName);
-  const archivedFPath = path.join(currDir, 'archived', fName);
+  const exportedFPath = path.join(currDir, '../ss', exportedFName);
+  const archivedFPath = path.join(currDir, 'ss-archive', fName);
 
   const image = sharp(fPath);
   const metadata = await image.metadata();
@@ -91,10 +91,3 @@ const promises = imageFiles.map(async (fName) => {
 
 await Promise.all(promises);
 console.log('all image files processed')
-
-// await (async function() {
-//   for (let i = 0; i < files.length; i++) {
-//     console.log('processing ' + files[i]);
-//     await cropImage(files[i]);
-//   }
-// })();
