@@ -10,23 +10,6 @@ const primes = [
   683257, 709201, 362393, 516233, 16253,  477539, 946177, 636319
 ];
 
-function findImageFiles() {
-  const files = [];
-
-  fs
-    .readdirSync(currDir, {withFileTypes: true})
-    .forEach((entry) => {
-      const entryUrl = path.join(currDir, entry.name);
-      if (entry.name.startsWith('--')) return;
-      if (entry.name.startsWith('__')) return;
-      if (entry.isFile()) {
-        if (path.extname(entry.name) == '.png') files.push(entryUrl);
-      }
-    });
-
-  return files;
-}
-
 const imageFiles =
   fs
     .readdirSync(currDir, {withFileTypes: true})
@@ -38,22 +21,22 @@ const imageFiles =
     ))
     .map((entry) => entry.name);
 
-// console.log(files);
-
 const promises = imageFiles.map(async (fName) => {
-  // const fName = path.basename(fPath);
-  const formId = parseInt(fName.slice(0, 7));
-  const formIdExt = (formId ^ primes[formId % 16]).toString(16).toUpperCase();
+  let id = parseInt(fName.slice(0, 7));
+  let idExt = '';
+
+  if (Number.isNaN(id)) id = path.basename(fName);
+  else idExt = '-' + (id ^ primes[id % 16]).toString(16).toUpperCase();
 
   const fPath = path.join(currDir, fName);
-  const exportedFName = `${formId}-${formIdExt}${path.extname(fName)}`;
+  const exportedFName = `${id}${idExt}${path.extname(fName)}`;
   const exportedFPath = path.join(currDir, '../ss', exportedFName);
   const archivedFPath = path.join(currDir, 'ss-archive', fName);
 
   const image = sharp(fPath);
-  const metadata = await image.metadata();
+  const {width, height} = await image.metadata();
 
-  if ((metadata.width === 1206) && (metadata.height === 2622)) {
+  if ((width === 1206) && (height === 2622)) {
     const w = 1204;
     const h = 1505;
     const svgText = `
@@ -71,7 +54,7 @@ const promises = imageFiles.map(async (fName) => {
       <text x="5%" y="50%"
         dominant-baseline="central"
         text-anchor="start"
-        class="title">${formId}</text>
+        class="title">${id}</text>
     </svg>`;
 
     const svgBuffer = Buffer.from(svgText);
@@ -82,10 +65,8 @@ const promises = imageFiles.map(async (fName) => {
       .toFile(exportedFPath);
 
     fs.renameSync(fPath, archivedFPath);
-
-    // console.log(`${exportedFName} processed`)
   } else {
-    console.log(`${exportedFName} (${metadata.width} x ${metadata.height}skipped`)
+    console.log(`${exportedFName} (${width} x ${height}skipped`)
   }
 });
 
