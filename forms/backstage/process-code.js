@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 
 import {TroopsData, HeroData} from './data.js';
+import {getHash} from './hash-table.js';
 
 const currDir = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -28,12 +29,16 @@ const codeFiles =
 
 codeFiles.forEach((fName) => {
   let id = parseInt(fName.slice(0, 7));
-  let idExt = '';
-  if (Number.isNaN(id)) id = path.basename(fName);
-  else idExt = '-' + (id ^ primes[id % 16]).toString(16).toUpperCase();
+  let hash = '';
+
+  if (Number.isNaN(id)) {
+    id = path.basename(fName);
+    hash = id;
+  } else {
+    hash = getHash(id);
+  }
 
   const fPath = path.join(currDir, fName);
-  const hashedName = `${id}${idExt}`;
   const encoded = fs.readFileSync(fPath, {encoding: 'utf8'});
   const decoded = atob(encoded);
 
@@ -104,7 +109,7 @@ codeFiles.forEach((fName) => {
     }
 
     fs.writeFileSync(
-      path.join(currDir, '../code', `${hashedName}.txt`),
+      path.join(currDir, '../code', `${hash}.txt`),
       btoa(JSON.stringify({
         GameMode: 0,
         troopLayout: cleanedLayout,
@@ -119,13 +124,9 @@ codeFiles.forEach((fName) => {
       .replaceAll('{{FORM STATS}}', troopStats)
       .replaceAll('{{HERO NAME}}', `${heroName} (${heroPos})`)
       .replaceAll('{{FORM ID}}', id)
-      .replaceAll('{{FORM SS URL}}', `https://aow.kitsune21.com/forms/ss/${hashedName}.png`)
-      .replaceAll('{{FORM CODE URL}}',  `https://aow.kitsune21.com/forms/code/${hashedName}.txt`);
+      .replaceAll('{{HASH}}', hash);
 
     fs.writeFileSync(path.join(currDir, '../msg', `${id}.json`), msg);
-
-    // console.log(`${exportedFName}\t${symmetry}\t${troopStats}\t${encoded}`);
-    // console.log(`${hashedName}\t${troopStats}`);
   } catch (e) {
     console.log(`${fName} not processed`);
   }

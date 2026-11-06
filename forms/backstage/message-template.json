@@ -21,7 +21,7 @@
           "items": [
             {
               "media": {
-                "url": "{{FORM SS URL}}"
+                "url": "https://aow.kitsune21.com/forms/ss/{{HASH}}.png"
               },
               "description": ""
             }
@@ -57,7 +57,7 @@
               "name": "🔗",
               "animated": false
             },
-            "url": "{{FORM CODE URL}}",
+            "url": "https://aow.kitsune21.com/forms/code/{{HASH}}.txt",
             "action_set_id": "362679855"
           }
         },
