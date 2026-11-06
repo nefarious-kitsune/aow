@@ -13,7 +13,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "{{FORM ID}}\n{{HERO NAME}} defense formation"
+          "content": "{{FORM ID}}{{FORM ALIAS}}\n{{HERO NAME}} defense formation"
         },
         {
           "id": 34123583,
