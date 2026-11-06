@@ -1,0 +1,83 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "1190007 (Old Pal 3)\nDavison (B) defense formation"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/3b0nhks9x.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "8 DA + 7 MC + 6 SK + 4 Nun + 4 RK + 3 Brw + 3 CW + 3 Fla + 3 HS + 2 MA + 2 MP + 2 OH + 1 PS + 1 SN"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 9,
+          "components": [
+            {
+              "id": 225349247,
+              "type": 10,
+              "content": "**:shield: Defense**"
+            }
+          ],
+          "accessory": {
+            "id": 48615152,
+            "type": 2,
+            "style": 5,
+            "label": "Formation Code",
+            "emoji": {
+              "name": "🔗",
+              "animated": false
+            },
+            "url": "https://aow.kitsune21.com/forms/code/3b0nhks9x.txt",
+            "action_set_id": "362679855"
+          }
+        },
+        {
+          "id": 54105696,
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "id": 372452896,
+          "type": 10,
+          "content": "**:crossed_swords: Counter(s)**\n- Jinn: 1380008 (Martini 3), 1380007, 1380006\n- Seodeok: 1390004 (Somaek)\n- Freyja: Green Fairy 2, 1"
+        }
+      ]
+    }
+  ],
+  "actions": {
+    "362679855": {
+      "actions": []
+    }
+  }
+}
