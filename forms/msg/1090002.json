@@ -1,0 +1,83 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "1090002\nHarrison (L) defense formation"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/310kpotnj.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "(33% asymmetric) 24 Cat + 6 DA + 5 PS + 4 Fla + 3 TM + 3 HS + 2 MP + 2 AP"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 9,
+          "components": [
+            {
+              "id": 225349247,
+              "type": 10,
+              "content": "**:shield: Defense**"
+            }
+          ],
+          "accessory": {
+            "id": 48615152,
+            "type": 2,
+            "style": 5,
+            "label": "Formation Code",
+            "emoji": {
+              "name": "🔗",
+              "animated": false
+            },
+            "url": "https://aow.kitsune21.com/forms/code/310kpotnj.txt",
+            "action_set_id": "362679855"
+          }
+        },
+        {
+          "id": 54105696,
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "id": 372452896,
+          "type": 10,
+          "content": "**:crossed_swords: Counter(s)**"
+        }
+      ]
+    }
+  ],
+  "actions": {
+    "362679855": {
+      "actions": []
+    }
+  }
+}
