@@ -1,0 +1,83 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "1090003\nHarrison (L) defense formation"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/3112gysai.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "19 Cat + 7 DA + 5 PS + 4 HS + 4 SK + 3 TM + 2 MP + 2 PM + 2 AP + 1 Pharaoh"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 9,
+          "components": [
+            {
+              "id": 225349247,
+              "type": 10,
+              "content": "**:shield: Defense**"
+            }
+          ],
+          "accessory": {
+            "id": 48615152,
+            "type": 2,
+            "style": 5,
+            "label": "Formation Code",
+            "emoji": {
+              "name": "🔗",
+              "animated": false
+            },
+            "url": "https://aow.kitsune21.com/forms/code/3112gysai.txt",
+            "action_set_id": "362679855"
+          }
+        },
+        {
+          "id": 54105696,
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "id": 372452896,
+          "type": 10,
+          "content": "**:crossed_swords: Counter(s)**"
+        }
+      ]
+    }
+  ],
+  "actions": {
+    "362679855": {
+      "actions": []
+    }
+  }
+}
