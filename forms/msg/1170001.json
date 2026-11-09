@@ -1,0 +1,79 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "1170001\nSelene (B) defense formation"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/391rzxd9c.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "11 SK + 7 FA + 5 DA + 4 Brw + 4 Nun + 4 RMG + 3 TM + 3 BtD + 3 MC + 2 Fla + 2 HS + 1 CW"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 9,
+          "components": [
+            {
+              "id": 225349247,
+              "type": 10,
+              "content": "**:shield: Defense**"
+            }
+          ],
+          "accessory": {
+            "id": 48615152,
+            "type": 2,
+            "style": 5,
+            "label": "Formation Code",
+            "emoji": {
+              "name": "🔗",
+              "animated": false
+            },
+            "url": "https://aow.kitsune21.com/forms/code/391rzxd9c.txt",
+            "action_set_id": "362679855"
+          }
+        },
+        {
+          "id": 54105696,
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "id": 372452896,
+          "type": 10,
+          "content": "**:crossed_swords: Counter(s)**\n- Jinn: 1380004 (Gin Tonic 4), 1380003, 1380002 (Jinn in the back), 1380001\n- Chione: 1280005 (Gingertini 1-4), 1280004 (Gingertini 1-3)\n- Selene: 1170015 (Blue Moon 3), 1170037 (Blue Moon 5)\n- Vlad III: 1420011"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
