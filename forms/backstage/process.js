@@ -78,13 +78,15 @@ async function processCode() {
       .slice(0, -path.extname(codeFName).length);
     let formId = parseInt(fBaseName.slice(0, 7));
     let formHash = '';
-    const formAlias =(fBaseName.length > 7)?fBaseName.slice(8):'';
+    let formAlias ='';
 
     if (Number.isNaN(formId)) {
       formId = fBaseName;
       formHash = fBaseName;
+      formAlias = fBaseName;
     } else {
       formHash = getHash(formId);
+      formAlias = fBaseName.slice(8);
     }
 
     const formLabel = (formAlias.length)?formAlias:formId;

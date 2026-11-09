@@ -337,7 +337,7 @@ export const TroopsData = [
   },
   {
     id  : 112,
-    name: 'Pilgrim',
+    name: 'Pilgrims',
     abbr: 'Pil',
     baseQtyL10: 2,
     baseQtyL9 : 1,
