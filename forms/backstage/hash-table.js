@@ -29,16 +29,10 @@ function openHashTable() {
 function updateHash(formId, hash) {
   if (!hashTableStream) {
     hashTableStream =
-      fs.createWriteStream(
-        hashTableFPath,
-        {encoding: 'utf8', flags:'a'}
-      );
-
-    console.log('Hash table stream opened');
+      fs.createWriteStream(hashTableFPath, {encoding: 'utf8', flags:'a'});
 
     process.on('exit', (code) => {
       hashTableStream.end();
-      console.log('Hash table closed');
     });
   }
 
@@ -53,7 +47,6 @@ export function getHash(formId) {
   if (entry) return entry.hash;
   else {
     let ts = Math.floor(new Date() / 316);
-    // const uint32ts = (ts + newHashCount++) >>> 0;
     const uint32ts = ts >>> 0;
     const bMask = 260461;
     const bShift = 7;

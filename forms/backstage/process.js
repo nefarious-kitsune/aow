@@ -26,7 +26,7 @@ const codeFiles =
     .map((entry) => entry.name);
 
 const idLabelSvgTemplate =
-`<svg width="380" height="100">'
+`<svg width="{{WIDTH}}" height="100">'
 <style>
     .title {
       fill: black;
@@ -43,7 +43,7 @@ const idLabelSvgTemplate =
   class="title">{{LABEL}}</text>
 </svg>`;
 
-async function processImages(fName, id, label, hash) {
+async function processImage(fName, label, hash) {
   const fPath = path.join(currDir, fName);
   const exportedFPath =
     path.join(currDir, '../ss', `${hash}${path.extname(fName)}`);
@@ -53,11 +53,29 @@ async function processImages(fName, id, label, hash) {
   const image = sharp(fPath);
   const {width, height} = await image.metadata();
 
+  const temp = await sharp({
+      text: {
+        text: label,
+        justify: true,
+        font: 'Fira Sans',
+        wrap: 'word',
+        rgba: true,
+        dpi: 432,
+      }
+    })
+    .png()
+    .toBuffer({resolveWithObject:true});
+
+  let measuredWidth = temp.info.width;
+  const labelWidth = (measuredWidth <= 340)?380:(38 + measuredWidth);
+
   if ((width === 1206) && (height === 2622)) {
     const w = 1204;
     const h = 1505;
-    const svgText = idLabelSvgTemplate.replace('{{LABEL}}', label);
-    const svgBuffer = Buffer.from(svgText);
+    const svgSource = idLabelSvgTemplate
+      .replace('{{LABEL}}', label)
+      .replace('{{WIDTH}}', labelWidth);
+    const svgBuffer = Buffer.from(svgSource);
     await image
       .extract({left: (1206-w), width: w, height: h, top: (1979+25-h)})
       .composite([{input: svgBuffer, left: 40, top: 100}])
@@ -66,7 +84,7 @@ async function processImages(fName, id, label, hash) {
     fs.renameSync(fPath, archivedFPath);
     await delay(Math.floor(Math.random()*5189 + 800));
   } else {
-    console.log(`${id} (${width} x ${height}) skipped`)
+    console.log(`${fName} (${width} x ${height}) skipped`);
   }
 }
 
@@ -184,7 +202,7 @@ async function processCode() {
 
       fs.writeFileSync(path.join(currDir, '../msg', `${formId}.json`), msg);
 
-      await processImages(`${formId}.png`, formId, formLabel, formHash);
+      await processImage(`${formId}.png`, formLabel, formHash);
     } catch (e) {
       // console.log(`${codeFName} not processed`);
       console.log(e);
