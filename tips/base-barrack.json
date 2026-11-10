@@ -8,7 +8,13 @@
     {
       "id": 974166537,
       "type": 10,
-      "content": "## Base Barrack\n\nRecommended barrack of troops you need to have decent scores in **Honor Hunting** and **Infinity War**."
+      "content": "## Base Barrack\n\nHave you ever merged multiple troops for Arena and later discovered empty slots in your Honor Hunting or Infinity War formations? If so, you are not alone!\n\nBelow is a suggested barrack for maintaining good scores in HH and IW. When upgrading a troop for Arena, keep in mind of what you need for HH/IW so that your decision does not come back to haunt you.\n\n`15` **Frost Archers** (8 L9+, 7 L8)\n`12` Taurus Witcher (12 L9+)\n`19` Slingshot Barbarian (19 L7+)\n`22` **Straw Kids** (12 L9+, 10 L6+)\n`14` Magic Apprentice (12 L9+, 2 L8)\n` 8` Harbinger of Fire (8 L9+)\n`13` **Voodoo Dolls** (13 L7+)\n` 6` or 8 **Nun** (6 L9+, 2 L8)\n` 4` Heal Spirit (4 L9+)\n` 5` Pilgrims (3 L9+, 2 L8)\n` 4` Brawlers (4 L9+)\n` 9` **Peltasts** (4 L9+, 5 L8)\n` 5` Ballista\n` 6` Dwarf Artillerymen\n`11` **Candle Warrior** (1 L10, 2 L9, 2 L8, 2 L7, 2 L6, 2 L5)\n`12` or 14 **Necromancer** (12 or 14)\n` 7` **Pumpkin Guard** (1 L9+, 6 L7+)\n`10` Mummy (10 L7+)\n` 5` Mechanical Chaser (5 L9+)\n` 4` Royal Musket Guards (6 L9+)\n`46` Goblin Tech (10 L9+, 36 L8)\n`13` Magnetic Pioneer (4 L9+, 9 L8)\n` 2` Yasha (2 L8)\n` 4` Meteor Golem (4 L8)\n` 2` Undead Soldier (2 L9)\n` 4` Undead Warrior (2 L9)\n` 6` Shadow Ninja (6 L9)\n` 2` Tauntman (2 L8)\n`11` Flash Angels (6 L9+, 5 L8)\n` 9` War Drum Gorilla (9 L8)\n` 4` Bloodthirsty Devil (2 L9+, 2 L8)\n` 3` Aegis Purifier (2 L9+, 1 L8)"
+    },
+    {
+      "id": 691846664,
+      "type": 14,
+      "divider": true,
+      "spacing": 2
     },
     {
       "id": 523859520,
@@ -17,7 +23,7 @@
         {
           "id": 411464105,
           "type": 10,
-          "content": "`15` Frost Archers (8 L9+, 7 L8)\n`12` Taurus Witcher (12 L9+)\n`19` Slingshot Barbarian (19 L7+)\n\nYou need up to __45__ long-range units for Honor Hunting. **Frost Archers** are very valuable and often used in high quantity. **Taurus Witcher** change target when activating skill and are useful for taking out small spiders in Spider Queen HH. **Slingshot Barbarian** should be kept at L7 at first so you have more freedom in making L9/10 FA and TW"
+          "content": "You need up to **45 archer units** for HH. Taurus Witcher change target when activating skill and are useful for taking out small spiders in Spider Queen HH. Slingshot Barbarian should be kept at L7 at first so you have more freedom in making L9+ FA and TW"
         }
       ],
       "accessory": {
@@ -29,10 +35,10 @@
       }
     },
     {
-      "id": 691846664,
+      "id": 939258578,
       "type": 14,
       "divider": true,
-      "spacing": 2
+      "spacing": 1
     },
     {
       "id": 330417953,
@@ -41,7 +47,7 @@
         {
           "id": 710860230,
           "type": 10,
-          "content": "`22` Straw Kids (12 L9+, 10 L6+)\n`14` Magic Apprentice (12 L9+, 2 L8)\n` 8` Harbinger of Fire (8 L9+)\n\n**Straw Kids** are very valuable and often used in high quantity. As of November 2026, you need up to __22__ Straw Kids for Infinity War. **Harbinger of Fire** are used in Spider Queen, though HoF can also work as fillers for SK in Infinity War because HoF have AoE (area-of-effect) damage.  **Magic Apprentice** have AoE damage and also work as fillers for SK in Infinity War."
+          "content": "As of November 2026, you need up to **22 Straw Kids** for IW. Harbinger of Fire and Magic Apprentice both have AoE (area-of-effect) damage and can work as fillers for SK in Infinity War. Upgrade these to L9+ so you have more freedom in making L9+ SK."
         }
       ],
       "accessory": {
@@ -53,10 +59,10 @@
       }
     },
     {
-      "id": 173085869,
+      "id": 20894711,
       "type": 14,
       "divider": true,
-      "spacing": 2
+      "spacing": 1
     },
     {
       "id": 269073656,
@@ -65,7 +71,7 @@
         {
           "id": 148596124,
           "type": 10,
-          "content": "`13` Voodoo Dolls (13 L7+)\n\n**Voodoo Dolls** are high damage dealers in Honor Hunting because their skill ignores the defense of the HH boss.\n\nIn Arena, __Voodo Dolls' curse skill can fail if the enemy target is at a higher level__. To use Voodoo Dolls in Arena, you need them at high quantity and max level. In the beginning, it's better to keep many VDs at lower levels (L7+) for Honor Hunting."
+          "content": "In Arena, Voodoo Dolls' *curse skill can fail if the enemy target is at a higher level*. To use VD in Arena, you need them at max level and in high quantity. In the beginning, it's better to keep VD at lower levels (L7+) for Honor Hunting."
         }
       ],
       "accessory": {
@@ -77,10 +83,10 @@
       }
     },
     {
-      "id": 530859685,
+      "id": 271387368,
       "type": 14,
       "divider": true,
-      "spacing": 2
+      "spacing": 1
     },
     {
       "id": 110372240,
@@ -89,7 +95,7 @@
         {
           "id": 705579236,
           "type": 10,
-          "content": "` 8`× Nun (6 L9+, 2 L8)\n` 4`× Heal Spirit (4 L9+)\n` 5`× Pilgrims (3 L9+, 2 L8)\n` 4`× Brawlers (4 L9+)\n\n**Nun** and **Pilgrim** are essential but very difficult to get because they are unavailable in Battlefield Troops Draw. When you are doing Lucky Time draw, __Nun and Pilgrims should take priority over Voodoo Dolls and Flash Angels__.\n"
+          "content": "Nun are critical in Cerberus HH. Cerberus has damage reflection skill, and the more damage your archer units deal, the more Nun you need. If you use Jinn in Cerberus, 6 Nun should be sufficient. If you use Sylvax in Cerberus, you may need 8 Nun in Cerberus. Also, if you use Copernicus in IW, you may need up to 8 Nun."
         }
       ],
       "accessory": {
@@ -101,10 +107,10 @@
       }
     },
     {
-      "id": 25712717,
+      "id": 534823922,
       "type": 14,
       "divider": true,
-      "spacing": 2
+      "spacing": 1
     },
     {
       "id": 528230539,
@@ -113,7 +119,7 @@
         {
           "id": 775693326,
           "type": 10,
-          "content": "` 9`× Peltasts (4 L9+, 5 L8)\n` 5`× Ballista\n` 6`× Dwarf Artillerymen\n\n**Peltasts** deal high AoE damage and some IW maps require Peltasts in large quantity. If you don't want to make many L9+ Peltasts specifically for Infinity War, you can use Ballista and Dwarf Artillerymen as fillers. **Ballista** also work as fillers in Cyclops."
+          "content": "Some IW maps require Peltasts in large quantity. If you don't want to make many L9+ Peltasts specifically for IW, you can use Ballista and Dwarf Artillerymen as fillers in IW. Ballista also work as fillers in Cyclops."
         }
       ],
       "accessory": {
@@ -125,10 +131,10 @@
       }
     },
     {
-      "id": 939258578,
+      "id": 988553650,
       "type": 14,
       "divider": true,
-      "spacing": 2
+      "spacing": 1
     },
     {
       "id": 969943639,
@@ -137,7 +143,7 @@
         {
           "id": 116713958,
           "type": 10,
-          "content": "`11`× Candle Warrior (1 L10, 2 L9 , 2 L8, 2 L7, 2 L6, 2 L5)\n\n**Candle Warrior** require __very careful barrack management__. In some HH and IW campaigns, you will get better results with CW at various levels. What levels you need is very situational, and you have to test it out yourself. It is best to keep at least 2 CW at each level."
+          "content": "Candle Warrior require careful barrack management. In some HH and IW campaigns, you will get better results with CW at various levels (for example, L9 + L8 + L6). What levels you need is very situational, and you have to test it out yourself. It is best to keep at least 2 CW at each level."
         }
       ],
       "accessory": {
@@ -161,7 +167,7 @@
         {
           "id": 238953714,
           "type": 10,
-          "content": "`12`× Necromancer (12 or 14)\n\n**Necromancer** are essential in Spider Queen and Ceberus. In phase 3 of Spider Queen, if you use 12 Necromancer, the boss will use the venom spray on your ranged units once or twice. If your Necromancer is below level 8, they will not survive the venom spray. If you do not have enough Necromancer, keep at least 14 of them at a lower level.\n\n` 7` Pumpkin Guard (1 L9+, 6 L7+)\n`10` Mummy (10 L7+)\n\n**Pumpkin Guard** can reduce HH boss's attack and help increase survivability of your troops. You need __1__ PG for Leviathan. If you just start the game and use a melee-based formation in HH, you need __1__ PG.\n\nIn Ice Dragon, you need around 17 of PG and Mummy combined. If you use them at level 8 or lower, a L8 Pumpkin Guard is equivalent to a L7 Mummy, and a L7 Pumpkin Guard is equivalent to a L6 Mummy.\n\n` 5` Mechanical Chaser (5 L9+)\n` 4` Royal Musket Guards (6 L9+)\n`46` Goblin Tech (10 L9+, 36 L8)\n`13` Magnetic Pioneer (4 L9+, 9 L8)\n` 2` Yasha (2 L8)\n` 4` Meteor Golem (4 L8)\n` 2` Undead Soldier (2 L9)\n` 4` Undead Warrior (2 L9)\n` 6` Shadow Ninja (6 L9)\n` 2` Tauntman (2 L8)\n`11` Flash Angels (6 L9+, 5 L8)\n` 5` Rhino Knight (5 L8)\n` 9` War Drum Gorilla (9 L8)\n` 4` Bloodthirsty Devil (2 L9+, 2 L8)\n` 5` Aegis Purifier (2 L9+, 1 L8)"
+          "content": "Necromancer are essential in Spider Queen and Ceberus. In phase 3 of Spider Queen, you need 12 Necromancer if you use Jinn, and you may need 14 Necromancer if you use Sylvax."
         }
       ],
       "accessory": {
@@ -173,10 +179,58 @@
       }
     },
     {
-      "id": 578124559,
+      "id": 494022284,
       "type": 14,
       "divider": true,
       "spacing": 2
+    },
+    {
+      "id": 656116367,
+      "type": 9,
+      "components": [
+        {
+          "id": 218369230,
+          "type": 10,
+          "content": "Pumpkin Guard can reduce HH boss's attack and help increase survivability of your troops. You need 1 PG for Leviathan. If you just started the game and use a melee-based formation in HH, you need 1 PG.\n\nIn Ice Dragon, you need around 17 of PG and Mummy combined. The exact number is situational and you need to test it out yourself. If you use them at level 8 or lower, a L8 PG is equivalent to a L7 Mummy, and a L7 PG is equivalent to a L6 Mummy."
+        }
+      ],
+      "accessory": {
+        "id": 978978898,
+        "type": 11,
+        "media": {
+          "url": "https://aow.kitsune21.com/assets/troops/PumpkinGuard.png"
+        }
+      }
+    },
+    {
+      "id": 129846738,
+      "type": 14,
+      "divider": true,
+      "spacing": 2
+    },
+    {
+      "id": 157118129,
+      "type": 12,
+      "items": [
+        {
+          "media": {
+            "url": "https://aow.kitsune21.com/forms/ss/8e1urtbes.png"
+          },
+          "description": "Example Cyclops formation"
+        },
+        {
+          "media": {
+            "url": "https://aow.kitsune21.com/forms/ss/8f1fsf8rd.png"
+          },
+          "description": "Example Spider Queen (phase 1/2) formation"
+        },
+        {
+          "media": {
+            "url": "https://aow.kitsune21.com/forms/ss/8f1gwdkas.png"
+          },
+          "description": "Example Spider Queen (phase 3) formation"
+        }
+      ]
     },
     {
       "id": 778510853,
