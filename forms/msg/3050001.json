@@ -13,7 +13,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "3050001\nantihero5 Leviathan formation"
+          "content": "3050001\nantihero5 Season 350 Leviathan formation\n\nPhase 1: 73M\nPhase 2: Unknown\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
@@ -34,6 +34,12 @@
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/8h0cy0094-2.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/tips/hh-leviathan-damage-ranking.png"
               },
               "description": ""
             }
