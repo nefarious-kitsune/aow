@@ -35,42 +35,24 @@
         {
           "id": 646998602,
           "type": 14,
-          "divider": true,
+          "divider": false,
           "spacing": 2
         },
         {
           "id": 993389933,
-          "type": 9,
-          "components": [
-            {
-              "id": 225349247,
-              "type": 10,
-              "content": "**:shield: Defense**"
-            }
-          ],
-          "accessory": {
-            "id": 48615152,
-            "type": 2,
-            "style": 5,
-            "label": "Code",
-            "emoji": {
-              "name": "🔗",
-              "animated": false
-            },
-            "url": "https://aow.kitsune21.com/forms/code/{{HASH}}.txt",
-            "action_set_id": "362679855"
-          }
+          "type": 10,
+          "content": "<:formation_red:1569628007898021959> **Defense**\n- [Code](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)"
         },
         {
           "id": 54105696,
           "type": 14,
-          "divider": true,
+          "divider": false,
           "spacing": 1
         },
         {
           "id": 372452896,
           "type": 10,
-          "content": "**:crossed_swords: Counter(s)**"
+          "content": "<:formation_blue:1569627680259964958> **Counter(s)**"
         }
       ]
     }
