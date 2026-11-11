@@ -43,7 +43,33 @@ const idLabelSvgTemplate =
   class="title">{{LABEL}}</text>
 </svg>`;
 
-async function processImage(fName, label, hash) {
+async function getLabelBuffer(label) {
+  const tempSource = {
+      text: {
+        text: label.toString(),
+        justify: true,
+        font: 'Fira Sans',
+        wrap: 'word',
+        rgba: true,
+        dpi: 432,
+      }
+    };
+  console.log('getLabelBuffer '+ label);
+
+  const tempBuffer = await sharp(tempSource)
+    .png()
+    .toBuffer({resolveWithObject:true});
+  const labelTextWidth = tempBuffer.info.width;
+  const labelWidth = (labelTextWidth <= 340)?380:(38 + labelTextWidth);
+
+  const svgSource = idLabelSvgTemplate
+      .replace('{{LABEL}}', label)
+      .replace('{{WIDTH}}', labelWidth);
+
+  return Buffer.from(svgSource);
+}
+
+async function processFormationImage(fName, label, hash) {
   const fPath = path.join(currDir, fName);
   const exportedFPath =
     path.join(currDir, '../ss', `${hash}${path.extname(fName)}`);
@@ -53,38 +79,53 @@ async function processImage(fName, label, hash) {
   const image = sharp(fPath);
   const {width, height} = await image.metadata();
 
-  const temp = await sharp({
-      text: {
-        text: label,
-        justify: true,
-        font: 'Fira Sans',
-        wrap: 'word',
-        rgba: true,
-        dpi: 432,
-      }
-    })
-    .png()
-    .toBuffer({resolveWithObject:true});
-
-  let measuredWidth = temp.info.width;
-  const labelWidth = (measuredWidth <= 340)?380:(38 + measuredWidth);
-
   if ((width === 1206) && (height === 2622)) {
     const w = 1204;
     const h = 1505;
-    const svgSource = idLabelSvgTemplate
-      .replace('{{LABEL}}', label)
-      .replace('{{WIDTH}}', labelWidth);
-    const svgBuffer = Buffer.from(svgSource);
+    const svgBuffer = await getLabelBuffer(label);
     await image
       .extract({left: (1206-w), width: w, height: h, top: (1979+25-h)})
       .composite([{input: svgBuffer, left: 40, top: 100}])
       .toFile(exportedFPath);
 
+    await processReportImages(fName, hash);
+
     fs.renameSync(fPath, archivedFPath);
-    await delay(Math.floor(Math.random()*5189 + 800));
+    // await delay(Math.floor(Math.random()*5189 + 800));
   } else {
     console.log(`${fName} (${width} x ${height}) skipped`);
+  }
+}
+
+async function processReportImages(fName, hash) {
+  const fExtName = path.extname(fName);
+  const fBaseName = fName.slice(0, -fExtName.length);
+
+  for (let ext = 1; ext <= 9; ext++) {
+    const fPath = path.join(currDir, `${fBaseName}-${ext}${fExtName}`);
+    console.log(fPath);
+    if (!fs.existsSync(fPath)) break;
+
+    const exportedFPath =
+      path.join(currDir, '../ss', `${hash}-${ext}${fExtName}`);
+    const archivedFPath =
+      path.join(currDir, 'ss-archive', `${fBaseName}-${ext}${fExtName}`);
+
+    const image = sharp(fPath);
+
+    const cropLeft = 19;
+    const cropTop = 473;
+    const cropBottom = 2359;
+    await image
+      .extract({
+        left: cropLeft,
+        width: 1206 - (cropLeft * 2),
+        height: cropBottom - cropTop,
+        top: cropTop
+      })
+      .toFile(exportedFPath);
+
+    fs.renameSync(fPath, archivedFPath);
   }
 }
 
@@ -143,23 +184,26 @@ async function processCode() {
         }
       }
 
+      let troopStats = TroopsData
+        .filter((troop)=>(troop.count>0))
+        .sort((a, b) => b.count - a.count)
+        .map((troop) => troop.count + ' ' + troop.abbr)
+        .join(' + ');
+
       let symmetry = 0;
       for (let row = 0; row <= 6; row++) {
         for (let col = 0; col < 3; col++) {
           if (layoutGrid[row][col] === layoutGrid[row][6-col]) symmetry++;
         }
       }
-
-      let troopStats =
-        (symmetry === 21)?
-        '':
-        `(${Math.round(100 * (21 - symmetry) / 21)}% asymmetric) `
-
-      troopStats += TroopsData
-        .filter((troop)=>(troop.count>0))
-        .sort((a, b) => b.count - a.count)
-        .map((troop) => troop.count + ' ' + troop.abbr)
-        .join(' + ');
+      if (symmetry < 21) {
+        if (symmetry < 5) {
+          troopStats = '(Asymmetric) ' + troopStats;
+        } else {
+          symmetry = Math.round(100 * (21 - symmetry) / 21);
+          troopStats = `(${symmetry}% asymmetric) `+ troopStats;
+        }
+      }
 
       let heroId = -1;
       let heroPos = '';
@@ -191,8 +235,6 @@ async function processCode() {
         }))
       );
 
-      fs.renameSync(codeFPath, path.join(currDir, 'form-archived', codeFName));
-
       const msg = messageTemplate
         .replaceAll('{{FORM STATS}}', troopStats)
         .replaceAll('{{HERO NAME}}', `${heroName} (${heroPos})`)
@@ -202,9 +244,11 @@ async function processCode() {
 
       fs.writeFileSync(path.join(currDir, '../msg', `${formId}.json`), msg);
 
-      await processImage(`${formId}.png`, formLabel, formHash);
+      await processFormationImage(`${formId}.png`, formLabel, formHash);
+
+      fs.renameSync(codeFPath, path.join(currDir, 'form-archived', codeFName));
+
     } catch (e) {
-      // console.log(`${codeFName} not processed`);
       console.log(e);
     }
   }

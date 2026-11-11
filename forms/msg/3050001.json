@@ -1,0 +1,62 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "3050001\nantihero5 Leviathan formation"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8h17grbtg.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8h17grbtg-1.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8h17grbtg-2.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "9 SK + 7 RK + 5 UW + 4 VD + 4 SN + 4 Fla + 4 HS + 4 MC + 2 Brw + 2 RMG + 2 AP + 1 Pil + 1 PG"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": false,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 10,
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Formation code](https://aow.kitsune21.com/forms/code/8h17grbtg.txt)"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
