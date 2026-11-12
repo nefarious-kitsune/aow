@@ -1,0 +1,63 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "messageid": 1570291445032681493,
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "3030003/3030004\nT??? Spider Queen formation (Season ???)\nPhase 1: 82–86M\nPhase 2: 47–59M\nPhase 3: 37M"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8f0zp2o4d.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8f0zp2o4d-1.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8f0zp2o4d-2.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "Phase 1, 2: 14 Necro + 12 FA + 11 TW + 6 RMG + 4 HS + 2 SB\nPhase 3:"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": false,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 10,
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1, 2](https://aow.kitsune21.com/forms/code/8f0zp2o4d.txt)\n- [Phase 3]()"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
