@@ -14,18 +14,13 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "{{FORM ID}}{{FORM ALIAS}}\n{{HERO NAME}} defense formation"
+          "content": "{{FORM ID}}\nT??? Ice Dragon formation (Season ???)\nPhase 1: 000–000M\nPhase 2: Unknown\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
           "type": 12,
           "items": [
-            {
-              "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/{{HASH}}.png"
-              },
-              "description": ""
-            }
+{{MEDIA ENTRIES}}
           ]
         },
         {
@@ -42,18 +37,7 @@
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_red:1569628007898021959> **Defense**\n- [Formation code](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)"
-        },
-        {
-          "id": 54105696,
-          "type": 14,
-          "divider": false,
-          "spacing": 1
-        },
-        {
-          "id": 372452896,
-          "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Counter(s)**"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Formation code](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)"
         }
       ]
     }

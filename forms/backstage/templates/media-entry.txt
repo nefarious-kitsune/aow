@@ -1,0 +1,6 @@
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/{{HASH}}.png"
+              },
+              "description": ""
+            }

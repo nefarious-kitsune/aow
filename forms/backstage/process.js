@@ -10,9 +10,19 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const currDir = path.dirname(url.fileURLToPath(import.meta.url));
 
-const messageTemplate = fs.readFileSync(
-  path.join(currDir, 'message-template.json'), {encoding: 'utf8'}
-);
+const readTextFile = (...p) =>
+  fs.readFileSync(path.join(...p), {encoding: 'utf8'});
+
+const templates = {
+  general: readTextFile(currDir, 'templates', 'general.txt'),
+  mediaEntry: readTextFile(currDir, 'templates', 'media-entry.txt'),
+  '301': readTextFile(currDir, 'templates', '301.txt'),
+  '302': readTextFile(currDir, 'templates', '302.txt'),
+  '303': readTextFile(currDir, 'templates', '303.txt'),
+  '304': readTextFile(currDir, 'templates', '304.txt'),
+  '305': readTextFile(currDir, 'templates', '305.txt'),
+  label: readTextFile(currDir, 'templates', 'label.svg.txt'),
+};
 
 const codeFiles =
   fs
@@ -25,24 +35,6 @@ const codeFiles =
     ))
     .map((entry) => entry.name);
 
-const idLabelSvgTemplate =
-`<svg width="{{WIDTH}}" height="100">'
-<style>
-    .title {
-      fill: black;
-      font-size: 68px;
-      font-family: "Fira Sans", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-    }
-</style>
-<rect width="100%" height="100%" fill="#f0f0f0A0" />
-<text x="5%" y="50%"
-  dominant-baseline="central"
-  text-anchor="start"
-  class="title">{{LABEL}}</text>
-</svg>`;
-
 async function getLabelBuffer(label) {
   const tempSource = {
       text: {
@@ -54,7 +46,6 @@ async function getLabelBuffer(label) {
         dpi: 432,
       }
     };
-  console.log('getLabelBuffer '+ label);
 
   const tempBuffer = await sharp(tempSource)
     .png()
@@ -62,57 +53,53 @@ async function getLabelBuffer(label) {
   const labelTextWidth = tempBuffer.info.width;
   const labelWidth = (labelTextWidth <= 340)?380:(38 + labelTextWidth);
 
-  const svgSource = idLabelSvgTemplate
+  const svgSource = templates.label
       .replace('{{LABEL}}', label)
       .replace('{{WIDTH}}', labelWidth);
 
   return Buffer.from(svgSource);
 }
 
-async function processFormationImage(fName, label, hash) {
-  const fPath = path.join(currDir, fName);
-  const exportedFPath =
-    path.join(currDir, '../ss', `${hash}${path.extname(fName)}`);
-  const archivedFPath =
-    path.join(currDir, 'ss-archive', fName);
+async function processFormationImage(formId, formLabel, formHash) {
+  const fPath = path.join(currDir, `${formId}.png`);
+  const expFPath = path.join(currDir, '../ss', `${formHash}.png`);
+  const archFPath = path.join(currDir, 'ss-archive', `${formId}.png`);
 
   const image = sharp(fPath);
   const {width, height} = await image.metadata();
 
+  let imageHashes = [];
+
   if ((width === 1206) && (height === 2622)) {
     const w = 1204;
     const h = 1505;
-    const svgBuffer = await getLabelBuffer(label);
+    const svgBuffer = await getLabelBuffer(formLabel);
     await image
       .extract({left: (1206-w), width: w, height: h, top: (1979+25-h)})
       .composite([{input: svgBuffer, left: 40, top: 100}])
-      .toFile(exportedFPath);
+      .toFile(expFPath);
 
-    await processReportImages(fName, hash);
+    imageHashes = [formHash]
+      .concat(await processReportImages(formId, formHash));
 
-    fs.renameSync(fPath, archivedFPath);
+    fs.renameSync(fPath, archFPath);
     // await delay(Math.floor(Math.random()*5189 + 800));
   } else {
-    console.log(`${fName} (${width} x ${height}) skipped`);
+    console.log(`${formId} (${width} x ${height}) skipped`);
   }
+
+  return imageHashes;
 }
 
-async function processReportImages(fName, hash) {
-  const fExtName = path.extname(fName);
-  const fBaseName = fName.slice(0, -fExtName.length);
-
+async function processReportImages(formId, hash) {
+  const imageHashes = [];
   for (let ext = 1; ext <= 9; ext++) {
-    const fPath = path.join(currDir, `${fBaseName}-${ext}${fExtName}`);
-    console.log(fPath);
-    if (!fs.existsSync(fPath)) break;
-
-    const exportedFPath =
-      path.join(currDir, '../ss', `${hash}-${ext}${fExtName}`);
-    const archivedFPath =
-      path.join(currDir, 'ss-archive', `${fBaseName}-${ext}${fExtName}`);
-
-    const image = sharp(fPath);
-
+    const srcFPath = path.join(currDir, `${formId}-${ext}.png`);
+    if (!fs.existsSync(srcFPath)) break;
+    imageHashes.push(`${hash}-${ext}`)
+    const expFPath = path.join(currDir, '../ss', `${hash}-${ext}.png`);
+    const archFPath = path.join(currDir, 'ss-archive', `${formId}-${ext}.png`);
+    const image = sharp(srcFPath);
     const cropLeft = 19;
     const cropTop = 473;
     const cropBottom = 2359;
@@ -123,10 +110,10 @@ async function processReportImages(fName, hash) {
         height: cropBottom - cropTop,
         top: cropTop
       })
-      .toFile(exportedFPath);
-
-    fs.renameSync(fPath, archivedFPath);
+      .toFile(expFPath);
+    fs.renameSync(srcFPath, archFPath);
   }
+  return imageHashes;
 }
 
 async function processCode() {
@@ -235,16 +222,25 @@ async function processCode() {
         }))
       );
 
-      const msg = messageTemplate
+      const category = codeFName.slice(0, 3);
+      const jsonTemplate =
+        templates[category]?templates[category]:templates.general;
+
+      const imageHashes =
+        await processFormationImage(formId, formLabel, formHash);
+      const mediaEntries = imageHashes
+        .map((h) => templates.mediaEntry.replace('{{HASH}}', h))
+        .join(',\n');
+
+      const msg = jsonTemplate
         .replaceAll('{{FORM STATS}}', troopStats)
         .replaceAll('{{HERO NAME}}', `${heroName} (${heroPos})`)
         .replaceAll('{{FORM ID}}', formId)
         .replaceAll('{{FORM ALIAS}}', (formAlias.length)?` (${formAlias})`:'')
-        .replaceAll('{{HASH}}', formHash);
+        .replaceAll('{{HASH}}', formHash)
+        .replaceAll('{{MEDIA ENTRIES}}', mediaEntries);
 
       fs.writeFileSync(path.join(currDir, '../msg', `${formId}.json`), msg);
-
-      await processFormationImage(`${formId}.png`, formLabel, formHash);
 
       fs.renameSync(codeFPath, path.join(currDir, 'form-archived', codeFName));
 
