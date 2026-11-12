@@ -119,9 +119,7 @@ async function processReportImages(formId, hash) {
 async function processCode() {
   for (let i = 0; i < codeFiles.length; i++) {
     const codeFName = codeFiles[i];
-    const fBaseName = path
-      .basename(codeFName)
-      .slice(0, -path.extname(codeFName).length);
+    const fBaseName = path.basename(codeFName).slice(0, -'.txt'.length);
     let formId = parseInt(fBaseName.slice(0, 7));
     let formHash = '';
     let formAlias ='';
@@ -141,7 +139,7 @@ async function processCode() {
     const imageFPath = path.join(currDir, `${formId}.png`);
     if (!fs.existsSync(imageFPath)) continue;
 
-    const formJsonSource = atob(fs.readFileSync(codeFPath, {encoding: 'utf8'}));
+    const formJsonSource = atob(readTextFile(codeFPath));
 
     try {
       const formation = JSON.parse(formJsonSource);
