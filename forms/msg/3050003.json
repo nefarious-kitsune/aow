@@ -1,0 +1,51 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "messageid": 1570268504853315685,
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "3050003\nT500 Leviathan formation (Season 350)\nPhase 1: 140–142M\nPhase 2: Unknown\nPhase 3: Unknown"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8h0up9z4o.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "12 VD + 12 UW + 8 MC + 4 HS + 4 RK + 3 AP + 2 Pil + 2 RMG + 1 Brw + 1 PG"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": false,
+          "spacing": 2
+        },
+        {
+          "id": 993389933,
+          "type": 10,
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Formation code](https://aow.kitsune21.com/forms/code/8h0up9z4o.txt)"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}

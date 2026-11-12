@@ -4,6 +4,7 @@
   "tts": false,
   "flags": 32768,
   "embeds": [],
+  "messageid": 1569906453634879499,
   "components": [
     {
       "id": 606657540,
@@ -13,7 +14,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "3050001\nantihero5 Season 350 Leviathan formation\n\nPhase 1: 73M\nPhase 2: Unknown\nPhase 3: Unknown"
+          "content": "3050001\nT5000 Leviathan formation (Season 350)\nPhase 1: 73–75M\nPhase 2: Unknown\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
@@ -34,12 +35,6 @@
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/8h0cy0094-2.png"
-              },
-              "description": ""
-            },
-            {
-              "media": {
-                "url": "https://aow.kitsune21.com/tips/hh-leviathan-damage-ranking.png"
               },
               "description": ""
             }
