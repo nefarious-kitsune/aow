@@ -4,6 +4,7 @@
   "tts": false,
   "flags": 32768,
   "embeds": [],
+  "messageid": 1568896112532787253,
   "components": [
     {
       "id": 606657540,
@@ -35,42 +36,24 @@
         {
           "id": 646998602,
           "type": 14,
-          "divider": true,
+          "divider": false,
           "spacing": 2
         },
         {
           "id": 993389933,
-          "type": 9,
-          "components": [
-            {
-              "id": 225349247,
-              "type": 10,
-              "content": "**:shield: Defense**"
-            }
-          ],
-          "accessory": {
-            "id": 48615152,
-            "type": 2,
-            "style": 5,
-            "label": "Formation Code",
-            "emoji": {
-              "name": "🔗",
-              "animated": false
-            },
-            "url": "https://aow.kitsune21.com/forms/code/3112gysai.txt",
-            "action_set_id": "362679855"
-          }
+          "type": 10,
+          "content": "<:formation_red:1569628007898021959> **Defense**\n- [Formation code](https://aow.kitsune21.com/forms/code/3112gysai.txt)"
         },
         {
           "id": 54105696,
           "type": 14,
-          "divider": true,
+          "divider": false,
           "spacing": 1
         },
         {
           "id": 372452896,
           "type": 10,
-          "content": "**:crossed_swords: Counter(s)**"
+          "content": "<:formation_blue:1569627680259964958> **Counter(s)**"
         }
       ]
     }
