@@ -14,7 +14,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "{{FORM ID}}/301????/301????\nT??? Spider Queen formation (Season ???)\nPhase 1: 000–000M\nPhase 2: Unknown\nPhase 3: Unknown"
+          "content": "{{FORM ID}}/301????/301????\nT??? Spider Queen formations (Season ???)\nPhase 1: 000–000M\nPhase 2: Unknown\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
