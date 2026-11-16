@@ -1,6 +1,7 @@
 import url from 'url';
 import path from 'path';
 import fs from 'fs';
+import yaml from 'js-yaml';
 
 import {TroopsData, HeroData} from './data.js';
 import {getHash} from './hash-table.js';
@@ -20,40 +21,45 @@ const templates = {
   '305': readTextFile(currDir, 'templates', '305.txt'),
 };
 
-const codeFiles =
+const sourceFiles =
   fs
     .readdirSync(currDir, {withFileTypes: true})
     .filter((entry) => (
       (!entry.name.startsWith('--')) &&
       (!entry.name.startsWith('__')) &&
       (entry.isFile()) &&
-      (path.extname(entry.name) == '.txt')
+      (path.extname(entry.name) == '.yaml')
     ))
     .map((entry) => entry.name);
 
-async function processCode() {
-  for (let i = 0; i < codeFiles.length; i++) {
-    const codeFName = codeFiles[i];
-    const fBaseName = path.basename(codeFName).slice(0, -'.txt'.length);
-    let formId = parseInt(fBaseName.slice(0, 7));
-    let formHash = '';
-    let formAlias ='';
+async function processSources() {
+  for (let i = 0; i < sourceFiles.length; i++) {
+    const fileName = sourceFiles[i];
+    const fBaseName = fileName.slice(0, -'.yaml'.length);
+    const codeFPath = path.join(currDir, fileName);
+    const source = yaml.load(readTextFile(path.join(currDir, fileName)));
 
-    if (Number.isNaN(formId)) {
-      formId = fBaseName;
-      formHash = fBaseName;
-      formAlias = fBaseName;
-    } else {
-      formHash = getHash(formId);
-      formAlias = fBaseName.slice(8);
-    }
+    console.log(source);
 
-    const codeFPath = path.join(currDir, codeFName);
-    const formJsonSource = atob(readTextFile(codeFPath));
+    const exported = {};
+    const isString = (s) => ((typeof s === 'string') && (s.length > 0));
 
     try {
-      const formation = JSON.parse(formJsonSource);
+      const formation = JSON.parse(atob(source.code));
       const {troopLayout, heroLayout} = formation;
+      const formId = (source.id)?source.id:parseInt(fBaseName.slice(0, 7));
+
+      if (typeof source.id === 'number') exported.id = source.id;
+      else exported.id = parseInt(fBaseName.slice(0, 7));
+
+      if (isString(source.hash)) exported.hash = source.hash;
+      else exported.hash = getHash(exported.id);
+
+      if (isString(source.hash)) exported.alias = source.hash;
+      else exported.alias = '';
+
+      if (source.type === 'attack') exported.type = 'attack';
+      else exported.alias = 'defense';
 
       // Reset troop count
       TroopsData.forEach((troop)=>troop.count = 0);
@@ -125,12 +131,12 @@ async function processCode() {
         btoa(JSON.stringify({
           GameMode: 0,
           troopLayout: cleanedLayout,
-          heroLayout: formation.heroLayout,
+          heroLayout: heroLayout,
           armyLayout: null,
         }))
       );
 
-      const category = codeFName.slice(0, 3);
+      const category = fileName.slice(0, 3);
       const jsonTemplate =
         templates[category]?templates[category]:templates.general;
 
@@ -140,13 +146,15 @@ async function processCode() {
         .replaceAll('{{FORM STATS}}', troopStats)
         .replaceAll('{{HERO NAME}}', `${heroName} (${heroPos})`)
         .replaceAll('{{FORM ID}}', formId)
-        .replaceAll('{{FORM ALIAS}}', (formAlias.length)?` (${formAlias})`:'')
-        .replaceAll('{{HASH}}', formHash)
+        .replaceAll(
+          '{{FORM ALIAS}}',
+          (exported.alias.length)?` (${exported.alias})`:'')
+        .replaceAll('{{HASH}}', exported.hash)
         .replaceAll('{{MEDIA ENTRIES}}', mediaEntries);
 
       fs.writeFileSync(path.join(currDir, '../msg', `${formId}.json`), msg);
 
-      fs.renameSync(codeFPath, path.join(currDir, 'form-archived', codeFName));
+      fs.renameSync(codeFPath, path.join(currDir, 'form-archived', fileName));
 
     } catch (e) {
       console.log(e);
@@ -154,4 +162,4 @@ async function processCode() {
   }
 }
 
-processCode();
+processSources();
