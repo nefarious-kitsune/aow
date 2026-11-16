@@ -203,46 +203,29 @@
       }
     },
     {
-      "id": 157118129,
-      "type": 12,
-      "items": [
-        {
-          "media": {
-            "url": "https://aow.kitsune21.com/forms/ss/8e1urtbes.png"
-          },
-          "description": "Example Cyclops formation"
-        },
-        {
-          "media": {
-            "url": "https://aow.kitsune21.com/forms/ss/8f1fsf8rd.png"
-          },
-          "description": "Example Spider Queen (phase 1/2) formation"
-        },
-        {
-          "media": {
-            "url": "https://aow.kitsune21.com/forms/ss/8f1gwdkas.png"
-          },
-          "description": "Example Spider Queen (phase 3) formation"
-        }
-      ]
-    },
-    {
-      "id": 778510853,
-      "type": 9,
+      "id": 223442486,
+      "type": 17,
+      "accent_color": 5793266,
       "components": [
         {
-          "id": 123939559,
-          "type": 10,
-          "content": "### Need more help?\nIf you need specific help such as what formation you need for each Infinity War map, head over to [The Library](https://discord.gg/b2QwnXJj2R) server."
+          "id": 286795661,
+          "type": 9,
+          "components": [
+            {
+              "id": 58109073,
+              "type": 10,
+              "content": "### Need more help?\nIf you need specific help such as what formation you need for each Infinity War map, head over to [The Library](https://discord.gg/b2QwnXJj2R) server."
+            }
+          ],
+          "accessory": {
+            "id": 726837688,
+            "type": 11,
+            "media": {
+              "url": "https://images-ext-1.discordapp.net/external/2ZAJpBTSEKWFRrCXz-VbX9SE-l3ZT5ddvJWMynDZEoc/https/cdn.discordapp.com/icons/1060296235166216293/79476002f436e6d0ada3ee8ff7c6df90.webp"
+            }
+          }
         }
-      ],
-      "accessory": {
-        "id": 377227411,
-        "type": 11,
-        "media": {
-          "url": "https://images-ext-1.discordapp.net/external/2ZAJpBTSEKWFRrCXz-VbX9SE-l3ZT5ddvJWMynDZEoc/https/cdn.discordapp.com/icons/1060296235166216293/79476002f436e6d0ada3ee8ff7c6df90.webp"
-        }
-      }
+      ]
     }
   ],
   "actions": {}
