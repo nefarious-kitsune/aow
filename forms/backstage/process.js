@@ -1,12 +1,9 @@
 import url from 'url';
 import path from 'path';
 import fs from 'fs';
-import sharp from 'sharp';
 
 import {TroopsData, HeroData} from './data.js';
 import {getHash} from './hash-table.js';
-
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const currDir = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -21,7 +18,6 @@ const templates = {
   '303': readTextFile(currDir, 'templates', '303.txt'),
   '304': readTextFile(currDir, 'templates', '304.txt'),
   '305': readTextFile(currDir, 'templates', '305.txt'),
-  label: readTextFile(currDir, 'templates', 'label.svg.txt'),
 };
 
 const codeFiles =
@@ -34,87 +30,6 @@ const codeFiles =
       (path.extname(entry.name) == '.txt')
     ))
     .map((entry) => entry.name);
-
-async function getLabelBuffer(label) {
-  const tempSource = {
-      text: {
-        text: label.toString(),
-        justify: true,
-        font: 'Fira Sans',
-        wrap: 'word',
-        rgba: true,
-        dpi: 432,
-      }
-    };
-
-  const tempBuffer = await sharp(tempSource)
-    .png()
-    .toBuffer({resolveWithObject:true});
-  const labelTextWidth = tempBuffer.info.width;
-  const labelWidth = (labelTextWidth <= 340)?380:(38 + labelTextWidth);
-
-  const svgSource = templates.label
-      .replace('{{LABEL}}', label)
-      .replace('{{WIDTH}}', labelWidth);
-
-  return Buffer.from(svgSource);
-}
-
-async function processFormationImage(formId, formLabel, formHash) {
-  const fPath = path.join(currDir, `${formId}.png`);
-  const expFPath = path.join(currDir, '../ss', `${formHash}.png`);
-  const archFPath = path.join(currDir, 'ss-archive', `${formId}.png`);
-
-  const image = sharp(fPath);
-  const {width, height} = await image.metadata();
-
-  let imageHashes = [];
-
-  if ((width === 1206) && (height === 2622)) {
-    const w = 1204;
-    const h = 1505;
-    const svgBuffer = await getLabelBuffer(formLabel);
-    await image
-      .extract({left: (1206-w), width: w, height: h, top: (1979+25-h)})
-      .composite([{input: svgBuffer, left: 40, top: 100}])
-      .toFile(expFPath);
-
-    imageHashes = [formHash]
-      .concat(await processReportImages(formId, formHash));
-
-    fs.renameSync(fPath, archFPath);
-    // await delay(Math.floor(Math.random()*5189 + 800));
-  } else {
-    console.log(`${formId} (${width} x ${height}) skipped`);
-  }
-
-  return imageHashes;
-}
-
-async function processReportImages(formId, hash) {
-  const imageHashes = [];
-  for (let ext = 1; ext <= 9; ext++) {
-    const srcFPath = path.join(currDir, `${formId}-${ext}.png`);
-    if (!fs.existsSync(srcFPath)) break;
-    imageHashes.push(`${hash}-${ext}`)
-    const expFPath = path.join(currDir, '../ss', `${hash}-${ext}.png`);
-    const archFPath = path.join(currDir, 'ss-archive', `${formId}-${ext}.png`);
-    const image = sharp(srcFPath);
-    const cropLeft = 19;
-    const cropTop = 473;
-    const cropBottom = 2359;
-    await image
-      .extract({
-        left: cropLeft,
-        width: 1206 - (cropLeft * 2),
-        height: cropBottom - cropTop,
-        top: cropTop
-      })
-      .toFile(expFPath);
-    fs.renameSync(srcFPath, archFPath);
-  }
-  return imageHashes;
-}
 
 async function processCode() {
   for (let i = 0; i < codeFiles.length; i++) {
@@ -133,12 +48,7 @@ async function processCode() {
       formAlias = fBaseName.slice(8);
     }
 
-    const formLabel = (formAlias.length)?formAlias:formId;
-
     const codeFPath = path.join(currDir, codeFName);
-    const imageFPath = path.join(currDir, `${formId}.png`);
-    if (!fs.existsSync(imageFPath)) continue;
-
     const formJsonSource = atob(readTextFile(codeFPath));
 
     try {
@@ -224,11 +134,7 @@ async function processCode() {
       const jsonTemplate =
         templates[category]?templates[category]:templates.general;
 
-      const imageHashes =
-        await processFormationImage(formId, formLabel, formHash);
-      const mediaEntries = imageHashes
-        .map((h) => templates.mediaEntry.replace('{{HASH}}', h))
-        .join(',\n');
+      const mediaEntries = templates.mediaEntry.replace('{{HASH}}', formHash);
 
       const msg = jsonTemplate
         .replaceAll('{{FORM STATS}}', troopStats)
