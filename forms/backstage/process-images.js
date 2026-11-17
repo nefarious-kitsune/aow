@@ -118,11 +118,11 @@ async function processImages() {
         const expFPath = path.join(currDir, '../ss', `${hash}v${formId2}.png`);
         const image = processFormImg(fPath, hash, formId2, formId);
         await image.toFile(expFPath);
-
       } else {
         const expFPath = path.join(currDir, '../ss', `${hash}.png`);
         const image = processFormImg(fPath, hash, formId, '');
-        await image.toFile(expFPath)
+        console.log(expFPath);
+        await image.toFile(expFPath);
       }
     }
     fs.renameSync(fPath, path.join(currDir, 'ss-archive', fName));
