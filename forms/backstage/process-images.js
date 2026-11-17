@@ -121,7 +121,6 @@ async function processImages() {
       } else {
         const expFPath = path.join(currDir, '../ss', `${hash}.png`);
         const image = processFormImg(fPath, hash, formId, '');
-        console.log(expFPath);
         await image.toFile(expFPath);
       }
     }
