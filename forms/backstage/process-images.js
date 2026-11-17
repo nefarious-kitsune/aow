@@ -101,7 +101,7 @@ async function processImages() {
     const hash = getHash(formId);
     const formCategory = parseInt(fBaseName.slice(0, 3));
 
-    if ((formCategory >= 300) & (formCategory < 400)) {
+    if ((formCategory >= 300) && (formCategory < 400)) {
       if (fBaseName.length > 7) {
         const reportId = fBaseName.slice(8);
         const expFPath = path.join(currDir, '../ss', `${hash}-${reportId}.png`);
