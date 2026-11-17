@@ -4,7 +4,7 @@
   "tts": false,
   "flags": 32768,
   "embeds": [],
-  "messageid": 1570433160012107878,
+  "messageid": 0,
   "components": [
     {
       "id": 606657540,
@@ -37,7 +37,7 @@
           "id": 646998602,
           "type": 14,
           "divider": false,
-          "spacing": 2
+          "spacing": 1
         },
         {
           "id": 993389933,
@@ -53,7 +53,7 @@
         {
           "id": 372452896,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Counter(s)**"
+          "content": "<:formation_blue:1569627680259964958> **Counter(s)**\n- Jinn: 1380003\n- Selene: 1170015 (Blue Moon 3), 1170037 (Blue Moon 5), 1170017 (Moon River)\n- Chione: 1280005 (Gingertini 1-4), 1280004 (Gingertini 1-3)"
         }
       ]
     }
