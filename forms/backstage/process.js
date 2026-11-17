@@ -19,6 +19,8 @@ const templates = {
   '303': readTextFile(currDir, 'templates', '303.txt'),
   '304': readTextFile(currDir, 'templates', '304.txt'),
   '305': readTextFile(currDir, 'templates', '305.txt'),
+  '351': readTextFile(currDir, 'templates', '351.txt'),
+  '352': readTextFile(currDir, 'templates', '352.txt'),
 };
 
 const getUnitId = (id) => ((id>999)?Math.floor(id/100):id);
