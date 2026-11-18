@@ -66,9 +66,7 @@ function processFormImg(fPath, hash, defId, atkId) {
         {input: getLabelBuffer(defId), left: 60, top: 60+(200-72)},
       ]);
   }
-
   // return image;
-  // await delay(Math.floor(Math.random()*5189 + 800));
 }
 
 function processReportImg(fPath, hash, formId, reportId) {
@@ -125,6 +123,7 @@ async function processImages() {
       }
     }
     fs.renameSync(fPath, path.join(currDir, 'ss-archive', fName));
+    await delay(Math.floor(Math.random()*5189 + 800));
   }
 }
 
