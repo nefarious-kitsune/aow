@@ -21,7 +21,13 @@
           "items": [
             {
               "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/8f18kpf23"
+                "url": "https://aow.kitsune21.com/forms/ss/8f18kpf23.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/0u1p811yh.png"
               },
               "description": ""
             }
@@ -41,7 +47,7 @@
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/8f18kpf23.txt)\n- [Phase 3]()"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/8f18kpf23.txt)\n- [Phase 3](https://aow.kitsune21.com/forms/code/0u1p811yh.txt)"
         }
       ]
     }
