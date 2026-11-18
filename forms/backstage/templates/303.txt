@@ -41,7 +41,7 @@
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)\n- [Phase 3]()"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- Phase 1[{{FORM ID}}](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)\n- Phase 3: [303?????]()"
         }
       ]
     }

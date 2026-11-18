@@ -1,53 +1,52 @@
 {
   "content": "",
   "username": "AntiGPT",
+  "avatar_url": "https://cdn.discordapp.com/avatars/1572457268278984848/76e4785d9a089ff9bc741c936e119189.png?size=1024",
   "tts": false,
   "flags": 32768,
   "embeds": [],
   "components": [
     {
-      "id": 606657540,
+      "id": 941826542,
       "type": 17,
       "accent_color": 5793266,
       "components": [
         {
-          "id": 974166537,
+          "id": 617029161,
           "type": 10,
-          "content": "3030004/3030005\nT10K Spider Queen formations (Season 307)\nPhase 1: 13M\nPhase 2: 9M\nPhase 3: 7M"
+          "content": "3030005/3030006\nT10K Spider Queen formations (Season 307)\nPhase 1: 13M\nPhase 2: 9M\nPhase 3: 7M"
         },
         {
-          "id": 34123583,
+          "id": 495508584,
           "type": 12,
           "items": [
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/8f16wruzc.png"
-              },
-              "description": ""
+              }
             },
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/8f1vbs4f8.png"
-              },
-              "description": ""
+              }
             }
           ]
         },
         {
-          "id": 100559588,
+          "id": 144915485,
           "type": 10,
           "content": "- Phase 1: 9 Necro + 7 SN + 5 TW + 4 US + 4 VD + 4 UW + 3 Pil + 3 Brw + 2 HoF + 2 Pelt + 2 HS + 1 GA + 1 CW + 1 RMG + 1 MC\n- Phase 3: 14 Necro + 8 FA + 7 Pelt + 6 TW + 3 GT + 3 VD + 3 SB + 2 US + 1 Pil + 1 Brw + 1 RMG"
         },
         {
-          "id": 646998602,
+          "id": 346386481,
           "type": 14,
           "divider": false,
           "spacing": 1
         },
         {
-          "id": 993389933,
+          "id": 323244872,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/8f16wruzc.txt)\n- [Phase 3](https://aow.kitsune21.com/forms/code/8f1vbs4f8.txt)"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- Phase 1: [3030005](https://aow.kitsune21.com/forms/code/8f16wruzc.txt)\n- Phase 3: [3030006](https://aow.kitsune21.com/forms/code/8f1vbs4f8.txt)"
         }
       ]
     }
