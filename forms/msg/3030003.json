@@ -4,7 +4,6 @@
   "tts": false,
   "flags": 32768,
   "embeds": [],
-  "messageid": 1570291445032681493,
   "components": [
     {
       "id": 606657540,
@@ -37,7 +36,13 @@
                 "url": "https://aow.kitsune21.com/forms/ss/8f0zp2o4d-2.png"
               },
               "description": ""
-            },
+            }
+          ]
+        },
+        {
+          "id": 839045552,
+          "type": 12,
+          "items": [
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/8f0q9ggw9.png"
@@ -61,7 +66,7 @@
         {
           "id": 100559588,
           "type": 10,
-          "content": "Phase 1, 2: 14 Necro + 12 FA + 11 TW + 6 RMG + 4 HS + 2 SB\nPhase 3: 14 Necro + 12 FA + 11 TW + 6 RMG + 4 HS + 2 SB"
+          "content": "- Phase 1: 12 Necro + 8 HoF + 6 SN + 4 VD + 4 UW + 3 TW + 3 CW + 3 MC + 2 HS + 2 RMG + 1 Pil + 1 Brw\n- Phase 3: 14 Necro + 12 FA + 11 TW + 6 RMG + 4 HS + 2 SB"
         },
         {
           "id": 646998602,
@@ -72,7 +77,7 @@
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1, 2](https://aow.kitsune21.com/forms/code/8f0zp2o4d.txt)\n- [Phase 3](https://aow.kitsune21.com/forms/code/8f0q9ggw9.txt)"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- Phase 1: [3030003](https://aow.kitsune21.com/forms/code/8f0zp2o4d.txt)\n- Phase 3: [3030004](https://aow.kitsune21.com/forms/code/8f0q9ggw9.txt)"
         }
       ]
     }
