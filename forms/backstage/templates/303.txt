@@ -13,7 +13,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "{{FORM ID}}/301????/301????\nT??? Spider Queen formations (Season ???)\nPhase 1: 000–000M\nPhase 2: Unknown\nPhase 3: Unknown"
+          "content": "{{FORM ID}}/303????\nT??? Spider Queen formations (Season ???)\nPhase 1: 000–000M (L?/? Candle Warrior)\nPhase 2: Unknown\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
@@ -30,7 +30,7 @@
         {
           "id": 100559588,
           "type": 10,
-          "content": "Phase 1: {{TROOP STATS}}\nPhase 2:\nPhase 3:"
+          "content": "- Phase 1: {{TROOP STATS}}\n- Phase 3:"
         },
         {
           "id": 646998602,
@@ -41,7 +41,7 @@
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)\n- [Phase 2]()\n- [Phase 3]()"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/{{HASH}}.txt)\n- [Phase 3]()"
         }
       ]
     }
