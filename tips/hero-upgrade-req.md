@@ -1,3 +1,7 @@
+layout: page
+title: Hero Upgrade Requirement
+permalink: /tips/hero-upgrade-req
+---
 ### Hero Upgrade Requirement
 
 To get a legendary hero to max level, you need `144` shards, `213K` dust, `2000` gem, and `69K` coin.
