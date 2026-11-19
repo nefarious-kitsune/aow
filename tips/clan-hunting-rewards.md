@@ -1,7 +1,3 @@
----
-title: Rewards for Clan Hunting
-permalink: /tips/clan-hunting-rewards
----
 ### Rewards for Clan Hunting
 
 **```                 Gold   Clan
