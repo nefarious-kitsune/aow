@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Hero Upgrade Requirement
 permalink: /tips/hero-upgrade-req
 ---
