@@ -96,8 +96,8 @@ async function processImages() {
       continue;
     }
 
-    const hash = getHash(formId);
     const formCategory = parseInt(fBaseName.slice(0, 3));
+    const hash = (formCategory>0)?getHash(formId):'000';
 
     if ((formCategory >= 300) && (formCategory < 400)) {
       if (fBaseName.length > 7) {
@@ -110,6 +110,12 @@ async function processImages() {
         const image = processFormImg(fPath, hash, '', formId);
         await image.toFile(expFPath);
       }
+    } else if (formCategory === 0) {
+      const formName = fBaseName.slice(8);
+      const expFName = formName.replaceAll(' ', '-').toLowerCase();
+      const expFPath = path.join(currDir, `../ss/sos-${expFName}.png`);
+      const image = processFormImg(fPath, hash, formName, '');
+      await image.toFile(expFPath);
     } else {
       if (fBaseName.length > 7) {
         const formId2 = fBaseName.slice(8);
