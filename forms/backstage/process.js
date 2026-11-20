@@ -48,43 +48,60 @@ async function processSources() {
 
       const source = yaml.load(readTextFile(fPath));
 
+      let formId;
+      if (typeof source.id === 'number') formId = source.id;
+      else formId = parseInt(fBaseName.slice(0, 7));
+
+      let formHash;
+      if (isString(source.hash)) formHash = source.hash;
+      else formHash = getHash(data.id);
+
       const data = {
-        id: 0,
-        hash: '',
-        alias: '',
-        type: '',
-        hero: '',
-        'hero-position': '',
-        'troop-stats': '',
-        'counters': '',
-        'message-link': '',
-        'code': '',
+        id: formId,
+        hash: formHash,
+        // type: '',
+
+        // hero: '',
+        // 'hero-position': '',
+        // 'troop-stats': '',
+        // 'counters': '',
+        // 'message-link': '',
+        // 'code': '',
       };
 
-      if (typeof source.id === 'number') data.id = source.id;
-      else data.id = parseInt(fBaseName.slice(0, 7));
-
-      if (isString(source.hash)) data.hash = source.hash;
-      else data.hash = getHash(data.id);
-
-      if (isString(source.alias)) data.alias = source.alias;
-      else data.alias = '';
-
-      if (source.type === 'attack') data.type = 'attack';
-      else data.type = 'defense';
-
-      if (isString(source['message-link']))
-        data['message-link'] = source['message-link'];
-
-      if (isString(source.counters)) data.counters = source.counters;
+      let formAlias = null;
+      if (isString(source.alias)) {
+        formAlias = source.alias;
+        data.alias = formAlias;
+      };
 
       const formCategory = Math.floor(data.id / 10000);
-
-      const isArenaFormation = (formCategory < 300);
-      const isDefenseFormation = (isArenaFormation && (data.type !== 'attack'));
+      const isArenaForm = (formCategory < 300);
+      const isDefenseForm = (isArenaForm && (source.type !== 'attack'));
       // const isHHFormation = ((formCategory >= 300) && (formCategory < 400));
       // const isIWFormation = ((formCategory >= 400) && (formCategory < 500));
       // const is8KFormation = ((formCategory >= 800) && (formCategory < 900));
+
+      if (isArenaForm) {
+        data.type = isDefenseForm?'defense':'attack';
+      }
+
+      data.hoer = '';
+      data['hero-position'] = '';
+      data['troop-stats'] = '';
+
+      let formCounters = null;
+      if (isString(source.counters)) {
+        formCounters = source.counters.trim();
+        data.counters = formCounters;
+      }
+
+      data['message-link'] =
+        isString(source['message-link'])?
+        source['message-link']:
+        '';
+
+      data.code = '';
 
       const {troopLayout, heroLayout} = JSON.parse(atob(source.code));
       const sanitizedFormation = {
@@ -121,7 +138,7 @@ async function processSources() {
         .map((troop) => troop.count + ' ' + troop.abbr)
         .join(' + ');
 
-      if (isArenaFormation) {
+      if (isArenaForm) {
         let symmetry = 0;
         for (let row = 0; row <= 6; row++) {
           for (let col = 0; col < 3; col++) {
@@ -168,14 +185,14 @@ async function processSources() {
       data.code = btoa(JSON.stringify(sanitizedFormation));
 
       fs.writeFileSync(
-        path.join(currDir, '../code', `${data.hash}.txt`),
+        path.join(currDir, '../code', `${formHash}.txt`),
         data.code
       );
 
       let messageTemplate = '';
       if (templates[formCategory.toString()]) {
         messageTemplate = templates[formCategory.toString()];
-      } else if (isDefenseFormation) {
+      } else if (isDefenseForm) {
         messageTemplate = templates.defense;
       } else {
         messageTemplate = templates.attack;
@@ -184,14 +201,10 @@ async function processSources() {
       const msg = messageTemplate
         .replaceAll('{{TROOP STATS}}', data['troop-stats'])
         .replaceAll('{{HERO NAME}}', `${heroName} (${heroPos})`)
-        .replaceAll('{{FORM ID}}', data.id)
-        .replaceAll(
-          '{{FORM ALIAS}}',
-          (data.alias.length)?` (${data.alias})`:'')
-        .replaceAll('{{HASH}}', data.hash)
-        .replaceAll(
-          '{{COUNTERS}}',
-          data.counters.trim().replaceAll('\n', '\\n'),
+        .replaceAll('{{FORM ID}}', formId)
+        .replaceAll('{{FORM ALIAS}}', (formAlias)?` (${formAlias})`:'')
+        .replaceAll('{{HASH}}', formHash)
+        .replaceAll('{{COUNTERS}}', formCounters.replaceAll('\n', '\\n'),
         );
 
       fs.writeFileSync(
