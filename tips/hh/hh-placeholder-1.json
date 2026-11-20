@@ -1,0 +1,29 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 696189420,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 945644108,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/assets/banners/honor-hunting.png"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}

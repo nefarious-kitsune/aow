@@ -1,0 +1,23 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 529160179,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 719001286,
+          "type": 10,
+          "content": "## Tips\n\nIgnosce, haec pars in praesenti vacua est. Speramus aliquem tempus et operam inventurum esse ad accuratam de hac re institutionem conscribendam. Interim, si quid scire vis, roga quaeso alios lusores."
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
