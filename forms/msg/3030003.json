@@ -1,6 +1,7 @@
 {
   "content": "",
   "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
   "tts": false,
   "flags": 32768,
   "embeds": [],
@@ -8,7 +9,7 @@
     {
       "id": 606657540,
       "type": 17,
-      "accent_color": 5793266,
+      "accent_color": 16711935,
       "components": [
         {
           "id": 974166537,
@@ -21,7 +22,7 @@
           "items": [
             {
               "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/8f0zp2o4d.png"
+                "url": "https://aow.kitsune21.com/forms/ss/8f0zp2o4d.png?v2"
               },
               "description": ""
             },
