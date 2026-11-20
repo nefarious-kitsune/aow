@@ -9,7 +9,7 @@
     {
       "id": 734571938,
       "type": 17,
-      "accent_color": 5793266,
+      "accent_color": 16711935,
       "components": [
         {
           "id": 624676826,
@@ -25,7 +25,7 @@
             "id": 168369289,
             "type": 11,
             "media": {
-              "url": "https://aow.kitsune21.com/assets/hosses/hh-sq.png"
+              "url": "https://aow.kitsune21.com/assets/bosses/hh-sq.png"
             }
           }
         },
