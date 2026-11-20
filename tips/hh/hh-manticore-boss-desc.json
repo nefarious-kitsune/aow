@@ -1,0 +1,41 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 734571938,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 624676826,
+          "type": 9,
+          "components": [
+            {
+              "id": 689888672,
+              "type": 10,
+              "content": "# Manticore"
+            }
+          ],
+          "accessory": {
+            "id": 168369289,
+            "type": 11,
+            "media": {
+              "url": "https://aow.kitsune21.com/assets/banners/honor-hunting.png"
+            }
+          }
+        },
+        {
+          "id": 376645228,
+          "type": 10,
+          "content": "### Season Buff\n*Increase our 10% basic attack critical strike rate\nReduce enemy's 10% basic attack damage reduction rate*\n\n### Roar Attack\nThe manticore roars, stuns the field, inflicts **3000**/4000/5000 damage to the hit unit, and interrupt all abilities.\nSkill duration: **4**/5/6\n\n### Tail Attack\nThe manticore inserts its tail into the ground, forming a poisonous fog on the battlefield, and the attack power of units in the poisonous fog is reduced by **50%**/60%/70%\n\n### Poison Needle Rain\nThe manticore flicks its tail and summoned a rain of poisonous needles, which immediately caused **1400**/1600/1800 range damage and **1400**/1600/1800 continuous damage to the front battlefield.\nSkill duration: **4**/5/6"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
