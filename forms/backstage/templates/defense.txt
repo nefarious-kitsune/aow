@@ -10,7 +10,7 @@
     {
       "id": 606657540,
       "type": 17,
-      "accent_color": 5793266,
+      "accent_color": 16711935,
       "components": [
         {
           "id": 974166537,
