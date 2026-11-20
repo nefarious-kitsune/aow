@@ -1,0 +1,41 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 734571938,
+      "type": 17,
+      "accent_color": 5793266,
+      "components": [
+        {
+          "id": 624676826,
+          "type": 9,
+          "components": [
+            {
+              "id": 689888672,
+              "type": 10,
+              "content": "# Spider Queen"
+            }
+          ],
+          "accessory": {
+            "id": 168369289,
+            "type": 11,
+            "media": {
+              "url": "https://aow.kitsune21.com/assets/hosses/hh-sq.png"
+            }
+          }
+        },
+        {
+          "id": 376645228,
+          "type": 10,
+          "content": "### Home Advantage\nThe ancient monster fights on his home court, his own and summoning creatures damage increases over time, and real damage is reduced\n\n### Spider Webs\nSpider Queen's lair is full of spider silk, which reduces the attack speed of ranged troops by **20%**/25%/30%. Since silk is easy to ignite, the spider queen is very afraid of fire, and all fire damage will deal bonus damage to the spider queen.\n\nWhenever using fire damage to deal **20000**/35000/50000 damage to the Spider Queen, a layer of **4%**/3%/2% overflow damage buff will be added the Spider Queen, up to **12** layers. And the number of layers will decay with time. If it is not stacked to the next layer within 3s time, it will drop one layer.\n\n### Venom Spray\nThe Spider Queen sprays venom forward, dealing **1200**/1600/2000 area damage.\n\n### Cocoon\nThe Spider Queen wraps herself with spider silk for **8** seconds, and is immune to **60%**/70%/75% damage in this state. The cocoon has **10000**/20000/30000 HP, and the cocoon will automatically disappear when the skill ends, or it can be broken easily by fire damage.\n\n### Spider Army\nThe Spider Queen summon **20** little spiders from the spider cocoon on the battlefield to fight for her. Each spider has **400**/600/800 attack damage and **20000**/22000/24000 HP. Spiders will take double fire damage"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}

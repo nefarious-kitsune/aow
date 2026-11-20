@@ -1,6 +1,7 @@
 {
   "content": "",
   "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
   "tts": false,
   "flags": 32768,
   "embeds": [],
