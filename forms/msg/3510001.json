@@ -9,12 +9,12 @@
     {
       "id": 606657540,
       "type": 17,
-      "accent_color": 5793266,
+      "accent_color": 16711935,
       "components": [
         {
           "id": 974166537,
           "type": 10,
-          "content": "3510001\nManticore formation\nPhase 1: 000–000M\nPhase 2: 37M\nPhase 3: Unknown"
+          "content": "3510001\nManticore formation\nPhase 1: 46M\nPhase 2: 37M\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
@@ -23,6 +23,18 @@
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/9r1asm327.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/9r1asm327-1.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/9r1asm327-2.png"
               },
               "description": ""
             }
