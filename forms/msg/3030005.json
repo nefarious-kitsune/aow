@@ -1,7 +1,7 @@
 {
   "content": "",
   "username": "AntiGPT",
-  "avatar_url": "https://cdn.discordapp.com/avatars/1572457268278984848/76e4785d9a089ff9bc741c936e119189.png?size=1024",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
   "tts": false,
   "flags": 32768,
   "embeds": [],
@@ -9,7 +9,7 @@
     {
       "id": 941826542,
       "type": 17,
-      "accent_color": 5793266,
+      "accent_color": 16711935,
       "components": [
         {
           "id": 617029161,
