@@ -83,6 +83,18 @@ function processReportImg(fPath, hash, formId, reportId) {
   return sharp(fPath).extract(cropOption);
 }
 
+function processFormSharingImg(fPath, hash, formId, reportId) {
+  const cropLeft = 19;
+  const cropTop = 396;
+  const cropOption = {
+    left: cropLeft,
+    width: 1206 - (cropLeft * 2),
+    height: 1460,
+    top: cropTop
+  };
+  return sharp(fPath).extract(cropOption);
+}
+
 async function processImages() {
   for (let i = 0; i < imageFiles.length; i++) {
     const fName = imageFiles[i];
@@ -97,9 +109,11 @@ async function processImages() {
     }
 
     const formCategory = parseInt(fBaseName.slice(0, 3));
+    const isHHFormation = ((formCategory >= 300) && (formCategory < 400));
+    const is8KFormation = ((formCategory >= 800) && (formCategory < 900));
     const hash = (formCategory>0)?getHash(formId):'000';
 
-    if ((formCategory >= 300) && (formCategory < 400)) {
+    if (isHHFormation) {
       if (fBaseName.length > 7) {
         const reportId = fBaseName.slice(8);
         const expFPath = path.join(currDir, '../ss', `${hash}-${reportId}.png`);
@@ -116,6 +130,17 @@ async function processImages() {
       const expFPath = path.join(currDir, `../ss/sos-${expFName}.png`);
       const image = processFormImg(fPath, hash, formName, '');
       await image.toFile(expFPath);
+    } else if (is8KFormation) {
+      if (fBaseName.length > 7) {
+        const reportId = fBaseName.slice(8);
+        const expFPath = path.join(currDir, '../ss', `${hash}-${reportId}.png`);
+        const image = processFormSharingImg(fPath, hash, formId, reportId);
+        await image.toFile(expFPath);
+      } else {
+        const expFPath = path.join(currDir, '../ss', `${hash}.png`);
+        const image = processFormImg(fPath, hash, '', formId);
+        await image.toFile(expFPath);
+      }
     } else {
       if (fBaseName.length > 7) {
         const formId2 = fBaseName.slice(8);

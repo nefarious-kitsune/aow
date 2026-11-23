@@ -21,6 +21,7 @@ const templates = {
   '305': readTextFile(currDir, 'templates', '305.txt'),
   '351': readTextFile(currDir, 'templates', '351.txt'),
   '352': readTextFile(currDir, 'templates', '352.txt'),
+  '801': readTextFile(currDir, 'templates', '801.txt'),
 };
 
 const getUnitId = (id) => ((id>999)?Math.floor(id/100):id);
@@ -80,7 +81,7 @@ async function processSources() {
       const isDefenseForm = (isArenaForm && (source.type !== 'attack'));
       // const isHHFormation = ((formCategory >= 300) && (formCategory < 400));
       // const isIWFormation = ((formCategory >= 400) && (formCategory < 500));
-      // const is8KFormation = ((formCategory >= 800) && (formCategory < 900));
+      const is8KFormation = ((formCategory >= 800) && (formCategory < 900));
 
       if (isArenaForm) {
         data.type = isDefenseForm?'defense':'attack';
@@ -90,7 +91,7 @@ async function processSources() {
       data['hero-position'] = '';
       data['troop-stats'] = '';
 
-      let formCounters = null;
+      let formCounters = '';
       if (isString(source.counters)) {
         formCounters = source.counters.trim();
         data.counters = formCounters;
