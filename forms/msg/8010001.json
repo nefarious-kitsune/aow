@@ -7,6 +7,18 @@
   "embeds": [],
   "components": [
     {
+      "id": 587490532,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 643516427,
+          "type": 10,
+          "content": "# Passing Classic Levels\n\nClearing classic levels can be very difficult. Here is a guide to help you passing all 8000 classic levels\n\n### General Tips\n- Set the reinforcement flag in the middle of enemy army to keep the enemy troops distracted\n- Passing classic levels is easier if there is some lag. Go to **Settings** and turn on __FX__ and __60 FPS__ to create lag.\n- Use **Davison** as your hero. Davison appears in Wheel of Fortune once every 8 weeks. You need around 21K gem to do 200 spins. If you do not have Davison, you can use **Vlad III**.\n\nIf you are stuck on a level, try the following:\n- Switch Davison's skill auto-cast between __OFF__ and __AUTO__\n- Switch level mode between __Normal__ mode and __Hard__ mode\n- Keep trying and wait for favorable RNG\n\n### Recommended Troops\n\n- **Melee**: __Undead Soldier__, __Magic Apprentice__, Ghost Assassins, Paladin, Cactuses, __Goblikazes__, __Peltasts__, __Flash Angels__\n- **Ranged**: Catapult, __Ballista__, __Ice Mage__, __Fire Mage__, Scholar, __Priest Mage__, Archers, __Taurus Witchers__, __Frost Archers__\n-  **Support**: __Magnetic Pioneer__, __Candle Warrior__\n\n### Troop Recruitment\n\n- When you are active, do as many Epic troops summon as you can at **Card Summon**. When you go offline, do Legendary troops summon. Put __Priest Mage__ in your Card Summon wishlist.\n- Focus on 30x **normal recruitment** so you can fill your formation with level-7 and level-8 common/rare troops\n- Do high-level Troop Card recruitment on the battlefield sparingly"
+        }
+      ]
+    },
+    {
       "id": 606657540,
       "type": 17,
       "accent_color": 16711935,
