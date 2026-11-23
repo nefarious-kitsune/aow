@@ -51,6 +51,52 @@
           "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Formation code](https://aow.kitsune21.com/forms/code/m91sjvz6v.txt)"
         }
       ]
+    },
+    {
+      "id": 461840506,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 303195910,
+          "type": 10,
+          "content": "8010002\nClassic Level formation"
+        },
+        {
+          "id": 214235652,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/m91n043ii.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/m91n043ii-1.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 139048291,
+          "type": 10,
+          "content": "7 Ballista + 6 Gz + 5 MA + 5 US + 4 FM + 4 IM + 3 Sch + 3 MP + 3 TW + 2 PM + 2 Pelt + 2 CW + 2 Fla + 1 FA"
+        },
+        {
+          "id": 990287181,
+          "type": 14,
+          "divider": false,
+          "spacing": 1
+        },
+        {
+          "id": 176389478,
+          "type": 10,
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Formation code](https://aow.kitsune21.com/forms/code/m91n043ii.txt)"
+        }
+      ]
     }
   ],
   "actions": {}
