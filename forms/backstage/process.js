@@ -54,7 +54,7 @@ async function processSources() {
 
       let formHash;
       if (isString(source.hash)) formHash = source.hash;
-      else formHash = getHash(data.id);
+      else formHash = getHash(formId);
 
       const data = {
         id: formId,
@@ -86,7 +86,7 @@ async function processSources() {
         data.type = isDefenseForm?'defense':'attack';
       }
 
-      data.hoer = '';
+      data.hero = '';
       data['hero-position'] = '';
       data['troop-stats'] = '';
 
