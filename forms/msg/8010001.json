@@ -1,0 +1,57 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "8010001\nClassic Level formation"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/m91sjvz6v.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/m91sjvz6v-1.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "6 MA + 5 IM + 5 Ballista + 5 Gz + 5 US + 4 FM + 4 TW + 2 Arch + 2 Pal + 2 PM + 2 Pelt + 2 CW + 2 Fla + 1 Sch + 1 MP + 1 FA"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": false,
+          "spacing": 1
+        },
+        {
+          "id": 993389933,
+          "type": 10,
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Formation code](https://aow.kitsune21.com/forms/code/m91sjvz6v.txt)"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
