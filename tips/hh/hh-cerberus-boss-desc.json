@@ -1,0 +1,41 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 734571938,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 624676826,
+          "type": 9,
+          "components": [
+            {
+              "id": 689888672,
+              "type": 10,
+              "content": "# Cerberus"
+            }
+          ],
+          "accessory": {
+            "id": 168369289,
+            "type": 11,
+            "media": {
+              "url": "https://aow.kitsune21.com/assets/bosses/hh-cer.png"
+            }
+          }
+        },
+        {
+          "id": 376645228,
+          "type": 10,
+          "content": "### Berserk State\nWhenever the giant receives a certain amount of damage, it will become violent. While increasing its attack speed, it will also exposes its weakness and receive more damage.\n\n### Home Advantage\nThe ancient monster fights on his home court, his own damage increases over time, and real damage received is reduced\n\n### Lava Armor\nThe lava armor of Cerberus will reflect 100%/150%/200% of the damage received.\n\n### Magma Ball\nCerberus spit out a magma ball, causing 700/900/1200 damage to the enemy\n\n### Soul Release\nThe Cerberus screams to release the soul impact, causing 1000/1500/2000 damage\n\n### Magma Shock\nHellhound tread on the ground in front of him, releasing underground magma, causing 2000/3500/5000 damage to the enemy"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}

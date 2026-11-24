@@ -1,0 +1,63 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "3010001/3010002/3010003\nT10K Cerberus formations (Season 352)\nPhase 1: 74–77M\nPhase 2: 53–54M\nPhase 3: 30–32M"
+        },
+        {
+          "id": 34123583,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0jlpnba"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0k5ou2u"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d158tz6g"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 100559588,
+          "type": 10,
+          "content": "Phase 1: 17 SB + 15 FA + 5 TW + 4 RMG + 3 Nun + 3 HS + 2 Necro\nPhase 2: 16 SB + 10 FA + 5 TW + 5 Nun + 4 HS + 4 RMG + 2 Necro + 2 Pelt + 1 GT\nPhase 3: 17 SB + 11 FA + 6 Nun + 5 TW + 4 RMG + 3 Necro + 2 HS + 1 GT"
+        },
+        {
+          "id": 646998602,
+          "type": 14,
+          "divider": false,
+          "spacing": 1
+        },
+        {
+          "id": 993389933,
+          "type": 10,
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/8d0jlpnba.txt)\n- [Phase 2](https://aow.kitsune21.com/forms/code/8d0k5ou2u.tx)\n- [Phase 3](https://aow.kitsune21.com/forms/code/8d158tz6g.tx)"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
