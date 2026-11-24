@@ -1,0 +1,28 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 734571938,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 639178702,
+          "type": 10,
+          "content": "# Clan Hunting"
+        },
+        {
+          "id": 376645228,
+          "type": 10,
+          "content": "- A round of Clan Hunting starts on Tuesday and lasts 7 days.\n- Each clan member can participate in Clan Hunt once per day (the member must be in the clan for 24 hours before participating). After completing a hunt, the member receives rewards based on the damage dealt in that hunt.\n- Progress rewards unlock when the total damages reach certain milestones. Clan members must be in the clan before the rewards unlock to be eligible to claim the rewards.\n- Progress rewards may be one of 5 tiers, depending on the total damage in the previous two rounds."
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}

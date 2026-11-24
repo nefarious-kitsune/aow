@@ -1,0 +1,28 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 734571938,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 639178702,
+          "type": 10,
+          "content": "### Clan Hunting Damage Rewards\n\nEach clan member can participate in Clan Hunt once per day (the member must be in the clan for 24 hours before participating). After completing a hunt, the member receives rewards based on the damage dealt in that hunt."
+        },
+        {
+          "id": 376645228,
+          "type": 10,
+          "content": "**```                 Gold   Clan\n        Damage   Coin   Coin```\n**```>12.0M           300K    250\n>10.0M, ≤12.0M   290K    225\n> 8.0M, ≤10.0M   280K    200\n> 7.0M, ≤ 8.0M   270K    190\n> 6.0M, ≤ 7.0M   260K    180\n> 5.0M, ≤ 6.0M   240K    170\n> 4.0M, ≤ 5.0M   220K    160\n> 3.5M, ≤ 4.0M   200K    150\n> 3.0M, ≤ 3.5M   180K    140\n> 2.5M, ≤ 3.0M   160K    130\n> 2.0M, ≤ 2.5M   140K    120\n> 1.5M, ≤ 2.0M   120K    110\n> 1.0M, ≤ 1.5M   100K    100\n> 900K, ≤ 1.0M    80K     90\n> 600K, ≤ 900K    70K     80\n> 400K, ≤ 600K    60K     70\n> 250K, ≤ 400K    50K     60\n> 150K, ≤ 250K    40K     50\n> 100K, ≤ 150K    30K     40\n>  50K, ≤ 100K    20K     30\n>  20K, ≤  50K    10K     20\n>   1K, ≤  20K     5K     10```"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
