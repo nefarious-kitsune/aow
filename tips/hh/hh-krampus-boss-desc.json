@@ -1,0 +1,41 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 734571938,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 624676826,
+          "type": 9,
+          "components": [
+            {
+              "id": 689888672,
+              "type": 10,
+              "content": "# Krampus"
+            }
+          ],
+          "accessory": {
+            "id": 168369289,
+            "type": 11,
+            "media": {
+              "url": "https://aow.kitsune21.com/assets/bosses/ch-kram.png"
+            }
+          }
+        },
+        {
+          "id": 376645228,
+          "type": 10,
+          "content": "### Glacial Defense\n*Resists incoming Skill Damage. __Basic Attacks__ are much more effective at piercing its defense!*\n\n### Frost Suppression\n*Deals continuous damage while slowing down the attack speed of affected enemies.*\n\n### Knockback Control\n*Knocks back and stuns enemies directly in front of it.*\n\n### Area Strike\n*Unleashes consecutive area-of-effect (AoE) strikes on enemies in front.*"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
