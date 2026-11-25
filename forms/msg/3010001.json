@@ -14,7 +14,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "3010001/3010002/3010003\nT10K Cerberus formations (Season 352)\nPhase 1: 74–77M\nPhase 2: 53–54M\nPhase 3: 30–32M"
+          "content": "3010001/3010002/3010003\nT10K Cerberus formations (Round 352)\nPhase 1: 80–81M\nPhase 2: ?–?M\nPhase 3: ?–?M"
         },
         {
           "id": 34123583,
@@ -22,10 +22,28 @@
           "items": [
             {
               "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/8d0jlpnba"
+                "url": "https://aow.kitsune21.com/forms/ss/8d0jlpnba.png"
               },
               "description": ""
             },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0jlpnba-1.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0jlpnba-2.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 991826257,
+          "type": 12,
+          "items": [
             {
               "media": {
                 "url": "https://aow.kitsune21.com/forms/ss/8d0k5ou2u"
@@ -43,7 +61,7 @@
         {
           "id": 100559588,
           "type": 10,
-          "content": "Phase 1: 17 SB + 15 FA + 5 TW + 4 RMG + 3 Nun + 3 HS + 2 Necro\nPhase 2: 16 SB + 10 FA + 5 TW + 5 Nun + 4 HS + 4 RMG + 2 Necro + 2 Pelt + 1 GT\nPhase 3: 17 SB + 11 FA + 6 Nun + 5 TW + 4 RMG + 3 Necro + 2 HS + 1 GT"
+          "content": "- Phase 1: 17 SB + 15 FA + 5 TW + 4 RMG + 3 Nun + 3 HS + 2 Necro\n- Phase 2: 16 SB + 10 FA + 5 TW + 5 Nun + 4 HS + 4 RMG + 2 Necro + 2 Pelt + 1 GT\n- Phase 3: 17 SB + 11 FA + 6 Nun + 5 TW + 4 RMG + 3 Necro + 2 HS + 1 GT"
         },
         {
           "id": 646998602,
