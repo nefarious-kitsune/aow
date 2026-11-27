@@ -1,0 +1,38 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 420106044,
+          "type": 10,
+          "content": "# Troop Requirements"
+        },
+        {
+          "id": 851478487,
+          "type": 10,
+          "content": "- Lv. ` 8` Troops: Main Level 1001 (Classic)\n- Lv. ` 9` Troops: Main Level 2001 (Classic)\n- Lv. `10` Troops: one Lv. 15 hero of same race\n- Lv. `11` Troops: *TBD*"
+        },
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "# Hero Requirements"
+        },
+        {
+          "id": 377119210,
+          "type": 10,
+          "content": "- Lv. 15.1 Heroes\n  - 2 Lv. 11 legendary heroes\n  - 10 Lv. 9 troops\n- Lv. 16 Heroes\n  - 3 Lv. 15 legendary heroes\n  - 20 Lv. 9 troops\n- Lv. 17 Heroes\n  - 4 Lv. 15 legendary heroes\n  - 20 Lv. 10 troops\n- Lv. 18 Heroes\n  - *TBD*"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}

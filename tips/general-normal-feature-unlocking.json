@@ -1,0 +1,65 @@
+{
+  "content": "",
+  "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
+  "tts": false,
+  "flags": 32768,
+  "embeds": [],
+  "components": [
+    {
+      "id": 606657540,
+      "type": 17,
+      "accent_color": 16711935,
+      "components": [
+        {
+          "id": 974166537,
+          "type": 10,
+          "content": "# Normal Features"
+        },
+        {
+          "id": 377119210,
+          "type": 10,
+          "content": "### Unlocked with Main Levels (Classic)\n- Lv `  1`: Friends\n- Lv `  1`: Card Summon\n- Lv `  1`: Recruitment Camp\n- Lv `  1`: Battlefield Recruitment\n  - 1× High-level recruit. @ Lv `101`\n  - 10× High-level recruit. @ Lv `3001`\n- Lv ` 29`: Wheel of Fortune\n- Lv ` 53`: Card Master"
+        },
+        {
+          "id": 719435626,
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "id": 107809234,
+          "type": 10,
+          "content": "- Lv ` 31`: Arena\n- Lv `101`: Infinity War ✻\n- Lv `101`: Honor Hunting\n- Lv `301`: Hero Trial"
+        },
+        {
+          "id": 689324213,
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "id": 910400648,
+          "type": 10,
+          "content": "- Lv ` 16`: Headhunt\n- Lv ` 71`: Expedition\n- Lv ` 81`: Clan\n- Lv ` 86`: Auto Battle\n- Lv `351`: Temple of Fusion"
+        },
+        {
+          "id": 787691195,
+          "type": 10,
+          "content": "### Unlocked at Main Level 8000 (Advanced)\n- Sweep in Honor Hunting\n- Sweep in Headhunt\n- 8-hour idle reward time (12-hour with VIP)\n"
+        },
+        {
+          "id": 556185766,
+          "type": 10,
+          "content": "### Unlocked with EXP Levels\n- EXP Lv `8`: Mystic Store\n- EXP Lv `8`: Trading Hall"
+        },
+        {
+          "id": 963280134,
+          "type": 10,
+          "content": "### Unlocked with Other Requirements\n- Magic Dust Wheel: 1 Lv. 10 Hero\n- [Commander Report](https://www.armyneedyou.com/user_home/index.html): Top 10000 in Arena\t"
+        }
+      ]
+    }
+  ],
+  "actions": {}
+}
