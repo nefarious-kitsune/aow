@@ -1,15 +1,16 @@
 {
   "content": "",
   "username": "AntiGPT",
+  "avatar_url": "https://aow.kitsune21.com/assets/antigpt.png",
   "tts": false,
   "flags": 32768,
   "embeds": [],
-  "messageid": 1568617512537686080,
+  "messageid": 0,
   "components": [
     {
       "id": 606657540,
       "type": 17,
-      "accent_color": 5793266,
+      "accent_color": 16711935,
       "components": [
         {
           "id": 974166537,
@@ -37,12 +38,12 @@
           "id": 646998602,
           "type": 14,
           "divider": false,
-          "spacing": 2
+          "spacing": 1
         },
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_red:1569628007898021959> **Defense**\n- [Code](https://aow.kitsune21.com/forms/code/310kpotnj.txt)"
+          "content": "<:formation_red:1569628007898021959> **Defense**\n- [Formation code](https://aow.kitsune21.com/forms/code/310kpotnj.txt)"
         },
         {
           "id": 54105696,
@@ -53,14 +54,10 @@
         {
           "id": 372452896,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Counter(s)**"
+          "content": "<:formation_blue:1569627680259964958> **Counter(s)**\n"
         }
       ]
     }
   ],
-  "actions": {
-    "362679855": {
-      "actions": []
-    }
-  }
+  "actions": {}
 }
