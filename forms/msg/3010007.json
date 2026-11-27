@@ -14,7 +14,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "3010007/3010008/3010009\nT2500 Cerberus formations (Round 352)\nPhase 1: 184–185M\nPhase 2: Unknown\nPhase 3: Unknown"
+          "content": "3010007/3010008/3010009\nT2500 Cerberus formations (Round 352)\nPhase 1: 184–185M\nPhase 2: 142–143M\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
@@ -41,9 +41,33 @@
           ]
         },
         {
+          "id": 896534158,
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0ihr8x4.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0ihr8x4-1.png"
+              },
+              "description": ""
+            },
+            {
+              "media": {
+                "url": "https://aow.kitsune21.com/forms/ss/8d0ihr8x4-2.png"
+              },
+              "description": ""
+            }
+          ]
+        },
+        {
           "id": 100559588,
           "type": 10,
-          "content": "- Phase 1: 22 SB + 13 FA + 6 RMG + 3 Nun + 3 HS + 2 Necro\n- Phase 2:\n- Phase 3:"
+          "content": "**`    SB  FA  RMG  Nun  HS  Necro`**\n**`P1`**`  22  13   6    3    3    2`\n**`P2`**`  22  12   6    4    3    2`\n**`P3`**"
         },
         {
           "id": 646998602,
