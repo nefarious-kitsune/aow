@@ -14,7 +14,7 @@
         {
           "id": 974166537,
           "type": 10,
-          "content": "3010004/3010005/3010006\nT5000 Cerberus formations (Round 352)\nPhase 1: 124M\nPhase 2: Unknown\nPhase 3: Unknown"
+          "content": "3010004/3010005/3010006\nT5000 Cerberus formations (Round 352)\nPhase 1: 124M\nPhase 2: 91–92M\nPhase 3: Unknown"
         },
         {
           "id": 34123583,
@@ -46,19 +46,19 @@
           "items": [
             {
               "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/8d04mbjls"
+                "url": "https://aow.kitsune21.com/forms/ss/8d04mbjls.png"
               },
               "description": ""
             },
             {
               "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/8d04mbjls-1"
+                "url": "https://aow.kitsune21.com/forms/ss/8d04mbjls-1.png"
               },
               "description": ""
             },
             {
               "media": {
-                "url": "https://aow.kitsune21.com/forms/ss/8d04mbjls-2"
+                "url": "https://aow.kitsune21.com/forms/ss/8d04mbjls-2.png"
               },
               "description": ""
             }
@@ -91,7 +91,7 @@
         {
           "id": 100559588,
           "type": 10,
-          "content": "- Phase 1: 16 SB + 11 FA + 8 TW + 6 RMG + 3 Nun + 3 HS + 2 Necro\n- Phase 2:\n- Phase 3:"
+          "content": "**`    SB  FA  TW  RMG  Nun  HS  Necro`**\n**`P1`**` 16  11   8   6    3    3    2`\n**`P2`**` 15  11   8   6    4    3    2`\n**`P3`**"
         },
         {
           "id": 646998602,
@@ -102,7 +102,7 @@
         {
           "id": 993389933,
           "type": 10,
-          "content": "<:formation_blue:1569627680259964958> **Formation**\n- [Phase 1](https://aow.kitsune21.com/forms/code/8d13kwdv6.txt)\n- [Phase 2](https://aow.kitsune21.com/forms/code/8d04mbjls.txt)\n- [Phase 3](https://aow.kitsune21.com/forms/code/8d09251qx.txt)"
+          "content": "<:formation_blue:1569627680259964958> **Formation**\n- Phase 1: [3010004](https://aow.kitsune21.com/forms/code/8d13kwdv6.txt)\n- Phase 2: [3010005](https://aow.kitsune21.com/forms/code/8d04mbjls.txt)\n- Phase 3: [3010006](https://aow.kitsune21.com/forms/code/8d09251qx.txt)"
         }
       ]
     }
